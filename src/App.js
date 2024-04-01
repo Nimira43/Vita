@@ -10,12 +10,12 @@ const App = () => {
     },
     {
       id: 1,
-      title: "jackets",
+      title: "coats",
       imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
     },
     {
       id: 1,
-      title: "sneakers",
+      title: "trainers",
       imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
     },
     {
