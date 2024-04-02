@@ -1,38 +1,19 @@
-import Directory from './components/directory/directory.component';
+import { Routes, Route } from 'react-router-dom'
 
-const App = () => {
+import Home from "./routes/home/home.component"
 
-  const categories = [
-    {
-      id: 1,
-      title: "hats",
-      imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
-    },
-    {
-      id: 1,
-      title: "coats",
-      imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
-    },
-    {
-      id: 1,
-      title: "trainers",
-      imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-    },
-    {
-      id: 1,
-      title: "womens",
-      imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-    },
-    {
-      id: 1,
-      title: "mens",
-      imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-    },
-  ];
-
-  return (
-    <Directory categories={categories} />
-  );
+const Shop = () => {
+  return <h1>Shop</h1>
 }
 
-export default App;
+const App = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />}>
+        <Route path="shop" element={<Shop />} />
+      </Route>
+    </Routes>
+  )
+}
+
+export default App
