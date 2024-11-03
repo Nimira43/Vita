@@ -1,6 +1,14 @@
+import Link from 'next/link'
+import { Button } from '../ui/button'
+import { RiEthFill } from 'react-icons/ri'
+
 function Logo() {
   return (
-    <div>Logo</div>
+    <Button size='icon' asChild>
+      <Link href='/'>
+        <RiEthFill className='w-6 h-6 text-[#ff4500]' />
+      </Link>
+    </Button>
   )
 }
 export default Logo
