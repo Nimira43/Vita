@@ -1,6 +1,10 @@
+'use client'
+
+import * as React from 'react'
+import { useTheme } from 'next-themes'
 import { RiMoonLine, RiSunLine } from 'react-icons/ri'
-import { Button } from '../ui/button'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../ui/dropdown-menu'
+import { Button } from '@/components/ui/button'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
 
 export default function ModeToggle() {
   const { setTheme } = useTheme()

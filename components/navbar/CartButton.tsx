@@ -1,4 +1,4 @@
-import { Button } from '../ui/button'
+import { Button } from '@/components/ui/button'
 import { PiShoppingCartLight } from 'react-icons/pi'
 import Link from 'next/link'
 
