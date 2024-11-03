@@ -1,6 +1,8 @@
 function Navbar() {
   return (
-    <div>Navbar</div>
+    <nav className='border-b'>
+      
+    </nav>
   )
 }
 export default Navbar
