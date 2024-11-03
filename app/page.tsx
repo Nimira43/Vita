@@ -1,5 +1,6 @@
-export default function page() {
+function HomePage() {
   return (
-    <div>page</div>
+    <h1 className="text-3xl">Home Page</h1>
   )
 }
+export default HomePage
