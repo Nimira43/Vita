@@ -6,7 +6,7 @@ function Logo() {
   return (
     <Button size='icon' asChild>
       <Link href='/'>
-        <RiEthFill className='w-6 h-6 text-[#ff4500]' />
+        <RiEthFill className='w-6 h-6 text-[#111]' />
       </Link>
     </Button>
   )
