@@ -1,7 +1,8 @@
 import Navbar from '@/components/navbar/Navbar'
 import Container from '@/components/global/Container'
+import Providers from './providers'
 import { Poppins } from 'next/font/google' 
-import type { Metadata } from "next"
+import type { Metadata } from 'next'
 import './globals.css'
 
 const poppins = Poppins({
@@ -10,8 +11,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Vita",
-  description: "Using React, TypeScript, Tailwind, Shadcn, Supabase, Clerk and Stripe",
+  title: 'Vita',
+  description: 'Using React, TypeScript, Tailwind, Shadcn, Supabase, Clerk and Stripe',
 }
 
 export default function RootLayout({
@@ -20,10 +21,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en' suppressHydrationWarning>
       <body className={poppins.className}>
-        <Navbar />
-        <Container className='py-20'>{children}</Container>
+        <Providers>
+          <Navbar />
+          <Container className='py-20'>{children}</Container>
+        </Providers>
       </body>
     </html>
   )
