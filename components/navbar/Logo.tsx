@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { Button } from '../ui/button'
 import { RiEthFill } from 'react-icons/ri'
-// import { VscCode } from 'react-icons/vsc'
 
 function Logo() {
   return (
