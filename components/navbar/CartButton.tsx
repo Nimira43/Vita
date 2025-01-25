@@ -1,15 +1,3 @@
-const CartButton = () => {
-  return (
-    <div>
-      <h1>CartButton</h1>      
-    </div>
-  )
-}
-
-export default CartButton
-
-
-
 // import { Button } from '@/components/ui/button'
 // import { PiShoppingCartLight } from 'react-icons/pi'
 // import Link from 'next/link'
