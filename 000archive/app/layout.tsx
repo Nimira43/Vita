@@ -1,6 +1,6 @@
 import Navbar from '@/components/navbar/Navbar'
 import Container from '@/components/global/Container'
-import Providers from './providers'
+import Providers from '../../app/providers'
 import { Poppins } from 'next/font/google' 
 import type { Metadata } from 'next'
 import './globals.css'
