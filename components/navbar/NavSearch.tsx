@@ -1,3 +1,14 @@
+const NavSearch = () => {
+  return (
+    <div>
+      <h1>NavSearch</h1>
+    </div>
+  )
+}
+
+export default NavSearch
+
+
 // import { Input } from '../ui/input'
 
 // function NavSearch() {

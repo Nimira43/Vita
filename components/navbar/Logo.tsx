@@ -1,3 +1,16 @@
+import React from 'react'
+
+const Logo = () => {
+  return (
+    <div>
+      <h1>Logo</h1>
+    </div>
+  )
+}
+
+export default Logo
+
+
 // import Link from 'next/link'
 // import { Button } from '../ui/button'
 // import { RiEthFill } from 'react-icons/ri'
