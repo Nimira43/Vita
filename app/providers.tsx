@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from "./theme-provider"
 
-function Providers({ children }:   { children: React.ReactNode }) {
+function Providers({ children }: { children: React.ReactNode }) {
   return (
     // <>
     //   {children}
