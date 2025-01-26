@@ -1,6 +1,8 @@
 function CartPage() {
   return (
-    <div>Cart Page</div>
+    <div>
+      <h1>Cart Page</h1>
+    </div>
   )
 }
 export default CartPage
