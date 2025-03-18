@@ -7,7 +7,6 @@ async function AboutPage() {
     }
   })
 const users = await db.testProfile.findMany()
-
   return (
     <div>
       {users.map((user) => {
