@@ -34,41 +34,14 @@
     "image": "https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=1600",
     "price": 400,
     "clerkId": "clerkId"
-  }
-  {
-    "name": "avant-garde lamp",
-    "company": "Modenza",
-    "description": "Make a bold statement with this avant-garde lamp, where artistry meets functionality. Its innovative design and striking silhouette create a captivating centerpiece for any room. Providing warm, ambient lighting, it blends modern aesthetics with practical elegance. Perfect for those seeking to illuminate their space with unique, creative flair.",
-    "featured": true,
-    "image": "https://images.pexels.com/photos/943150/pexels-photo-943150.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 100,
-    "clerkId": "clerkId"
   },
   {
-    "name": "chic chair",
-    "company": "Luxora",
-    "description": "Elevate your bedroom with this chic, stylish bed that exudes modern sophistication. Featuring a sleek design and premium upholstery, it blends elegance with comfort. The sturdy frame and supportive structure ensure restful nights, while its minimalist appeal complements any decor. A statement piece that transforms your sleeping space.",
+    "name": "luxury soy candles",
+    "company": "Elevation",
+    "description": "Handmade, eco-friendly soy candles in elegant glass jars. With rich fragrances like lavender, vanilla, and cedarwood, they create a cozy ambiance for every room. Long-lasting burn times ensure hours of relaxation. Perfect for gifting or treating yourself to a little indulgence.",
     "featured": true,
-    "image": "https://images.pexels.com/photos/5705090/pexels-photo-5705090.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 200,
-    "clerkId": "clerkId"
-  },
-  {
-    "name": "comfy bed",
-    "company": "Homestead",
-    "description": "Drift off into blissful sleep with this cozy, stylish bed. Designed for ultimate comfort, it features a sturdy frame, plush cushioning, and a modern design to complement any bedroom. Crafted with premium materials, it provides lasting durability and support. Your perfect partner for relaxing nights and refreshed mornings.",
-    "featured": true,
-    "image": "https://images.pexels.com/photos/1034584/pexels-photo-1034584.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 300,
-    "clerkId": "clerkId"
-  },
-  {
-    "name": "contemporary sofa",
-    "company": "Comfora",
-    "description": "Effortlessly blending style and comfort, this contemporary sofa is the perfect centerpiece for modern living spaces. Upholstered in premium fabric with clean lines and a minimalist design, it complements any decor. The plush cushioning and durable frame ensure long-lasting relaxation. Ideal for lounging, entertaining, or elevating your home's aesthetic.",
-    "featured": false,
-    "image": "https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 400,
+    "image": "https://www.pexels.com/photo/white-candles-on-the-table-5933781.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 50,
     "clerkId": "clerkId"
   }
 ]
