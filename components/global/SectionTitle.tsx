@@ -1,4 +1,4 @@
-function SectionTitle() {
+function SectionTitle({ text }: { text: string }) {
   return (
     <div>
       SectionTitle      
