@@ -1,13 +1,12 @@
-import { Button } from '@/components/ui/button'
+import FeatureProducts from '@/components/home/FeatureProducts'
+import Hero from '@/components/home/Hero'
 
 function HomePage() {
   return (
-    <div>
-      <h1 className='text-3xl'>HomePage</h1>
-      <Button variant='outline' size='lg' className='m-8'>
-        Submit
-      </Button>
-    </div>
+    <>
+      <Hero />
+      <FeatureProducts />
+    </>
   )
 }
 export default HomePage
