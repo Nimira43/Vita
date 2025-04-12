@@ -8,3 +8,11 @@ export const fetchFeaturedProducts = async () => {
   })
   return products
 }
+
+export const fetchAllProducts = () => {
+  return db.product.findMany({
+    orderBy: {
+      createdAt: 'desc',
+    }
+  })
+}
