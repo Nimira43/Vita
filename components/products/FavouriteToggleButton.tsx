@@ -1,8 +1,15 @@
+import { RiHeartLine } from 'react-icons/ri'
+import { Button } from '@/components/ui/button'
+
 function FavouriteToggleButton() {
   return (
-    <div>
-      FavouriteToggleButton      
-    </div>
+    <Button
+      size='icon'
+      variant='outline'
+      className='p-2 cursor-pointer'
+    >
+      <RiHeartLine />
+    </Button>
   )
 }
 
