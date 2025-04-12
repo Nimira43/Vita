@@ -1,7 +1,12 @@
+import { Separator } from '@/components/ui/separator'
+
 function SectionTitle({ text }: { text: string }) {
   return (
     <div>
-      SectionTitle      
+      <h2 className='text-3xl font-medium tracking-wider uppercase mb-8'>
+        {text}
+      </h2>
+      <Separator />
     </div>
   )
 }
