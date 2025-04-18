@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { Button } from "../ui/button"
-import HeroCarousel from "./HeroCarousel"
+import { Button } from '../ui/button'
+import HeroCarousel from './HeroCarousel'
 
 function Hero() {
   return (
