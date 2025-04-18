@@ -34,14 +34,5 @@
     "image": "https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=1600",
     "price": 400,
     "clerkId": "clerkId"
-  },
-  {
-    "name": "luxury soy candles",
-    "company": "Elevation",
-    "description": "Handmade, eco-friendly soy candles in elegant glass jars. With rich fragrances like lavender, vanilla, and cedarwood, they create a cozy ambiance for every room. Long-lasting burn times ensure hours of relaxation. Perfect for gifting or treating yourself to a little indulgence.",
-    "featured": true,
-    "image": "https://www.pexels.com/photo/white-candles-on-the-table-5933781.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 50,
-    "clerkId": "clerkId"
   }
 ]

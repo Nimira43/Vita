@@ -1,7 +1,7 @@
 import { RiHeartLine } from 'react-icons/ri'
 import { Button } from '@/components/ui/button'
 
-function FavouriteToggleButton() {
+function FavouriteToggleButton({productId}:{ProductId: string}) {
   return (
     <Button
       size='icon'
