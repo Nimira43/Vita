@@ -8,7 +8,7 @@ function AboutPage() {
         </span>
       </h1>
       <p className='mt-6 text-lg trackingwide leading-8 max-w-2xl mx-auto text-muted-foreground text-center'>
-        Vita brings style and comfortto you home/ Our expertly crafted furniture blends timeless design with modern functionality, transforming spaces with quality, elegance, and warmth. Discover your perfect piece today
+        Vita brings style and comfort to you home/ Our expertly crafted furniture blends timeless design with modern functionality, transforming spaces with quality, elegance, and warmth. Discover your perfect piece today
       </p>
     </section>
   )
