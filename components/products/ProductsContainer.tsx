@@ -3,6 +3,8 @@ import { Button } from '../ui/button'
 import Link from 'next/link'
 import { TbLayoutGrid } from 'react-icons/tb'
 import { Separator } from '../ui/separator'
+import ProductsGrid from './ProductsGrid'
+import ProductsList from './ProductsList'
 
 async function ProductsContainer({
   layout,
@@ -42,7 +44,15 @@ async function ProductsContainer({
         <Separator className='mt-4' />
       </section>
       <div>
-          
+        {totalProducts === 0 ? (
+          <h5 className='text-2xl mt-16'>
+            Sorry, we cannot find the product you are looking for...
+          </h5>
+        ) : layout === 'grid' ? (
+          <ProductsGrid products={products} />
+        ) : (
+          <ProductsList products={products} />
+        )}   
       </div>
     </> 
   )
