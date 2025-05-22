@@ -1,6 +1,5 @@
 import { fetchAllProducts } from '@/utils/actions'
 
-
 async function ProductsContainer({
   layout,
   search,
@@ -8,12 +7,19 @@ async function ProductsContainer({
   layout: string
   search: string
 }) {
- const products = await fetchAllProducts() 
-  
+  const products = await fetchAllProducts() 
+  const totalProducts = products.length
+  const searchTerm = search
+    ?
+    `&search=${search}`
+    :
+    ''
   return (
-    <div>
-      ProductsContainer      
-    </div>
+    <section>
+      <div className='flex justify-between items-center'>
+        <h4 className='font-medium'></h4>
+      </div>
+    </section>
   )
 }
 
