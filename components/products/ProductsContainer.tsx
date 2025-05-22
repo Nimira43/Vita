@@ -2,6 +2,7 @@ import { fetchAllProducts } from '@/utils/actions'
 import { Button } from '../ui/button'
 import Link from 'next/link'
 import { TbLayoutGrid } from 'react-icons/tb'
+import { Separator } from '../ui/separator'
 
 async function ProductsContainer({
   layout,
@@ -37,6 +38,7 @@ async function ProductsContainer({
           </Button>
         </div>
       </div>
+      <Separator className='mt-4' />
     </section>
   )
 }
