@@ -1,3 +1,5 @@
+import ProductsContainer from '@/components/products/ProductsContainer'
+
 function ProductsPage() {
   return (
     <div>
