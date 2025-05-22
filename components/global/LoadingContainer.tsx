@@ -3,8 +3,8 @@ import { Card, CardContent } from '../ui/card'
 
 function LoadingContainer() {
   return (
-    <div>
-      LoadingContainer      
+    <div className='pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
+      <h1>LoadingProduct</h1>
     </div>
   )
 }
