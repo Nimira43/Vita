@@ -19,27 +19,32 @@ async function ProductsContainer({
     :
     ''
   return (
-    <section>
-      <div className='flex justify-between items-center'>
-        <h4 className='font-medium text-lg'>
-          {totalProducts} product{totalProducts > 1 && 's'}
-        </h4>
-        <div className='flex gap-x-4'>
-          <Button 
-            variant={layout === 'grid' ? 'default' : 'ghost'}
-            size='icon'
-            asChild
-          >
-            <Link
-             href={`/products?layout=grid${searchTerm}`}
+    <>
+      <section>
+        <div className='flex justify-between items-center'>
+          <h4 className='font-medium text-lg'>
+            {totalProducts} product{totalProducts > 1 && 's'}
+          </h4>
+          <div className='flex gap-x-4'>
+            <Button 
+              variant={layout === 'grid' ? 'default' : 'ghost'}
+              size='icon'
+              asChild
             >
-              <TbLayoutGrid />
-            </Link>
-          </Button>
+              <Link
+              href={`/products?layout=grid${searchTerm}`}
+              >
+                <TbLayoutGrid />
+              </Link>
+            </Button>
+          </div>
         </div>
+        <Separator className='mt-4' />
+      </section>
+      <div>
+          
       </div>
-      <Separator className='mt-4' />
-    </section>
+    </> 
   )
 }
 
