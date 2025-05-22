@@ -17,7 +17,9 @@ async function ProductsContainer({
   return (
     <section>
       <div className='flex justify-between items-center'>
-        <h4 className='font-medium'></h4>
+        <h4 className='font-medium text-lg'>
+          {totalProducts} product{totalProducts > 1 && 's'}
+        </h4>
       </div>
     </section>
   )
