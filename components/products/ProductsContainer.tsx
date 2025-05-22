@@ -1,3 +1,4 @@
+import { fetchAllProducts } from '@/utils/actions'
 
 
 async function ProductsContainer({
@@ -7,6 +8,8 @@ async function ProductsContainer({
   layout: string
   search: string
 }) {
+ const products = await fetchAllProducts() 
+  
   return (
     <div>
       ProductsContainer      
