@@ -1,4 +1,7 @@
 import { fetchAllProducts } from '@/utils/actions'
+import { Button } from '../ui/button'
+import Link from 'next/link'
+import { TbLayoutGrid } from 'react-icons/tb'
 
 async function ProductsContainer({
   layout,
@@ -20,6 +23,19 @@ async function ProductsContainer({
         <h4 className='font-medium text-lg'>
           {totalProducts} product{totalProducts > 1 && 's'}
         </h4>
+        <div className='flex gap-x-4'>
+          <Button 
+            variant={layout === 'grid' ? 'default' : 'ghost'}
+            size='icon'
+            asChild
+          >
+            <Link
+             href={`/products?layout=grid${searchTerm}`}
+            >
+              <TbLayoutGrid />
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   )
