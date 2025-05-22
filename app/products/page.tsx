@@ -1,6 +1,11 @@
 import ProductsContainer from '@/components/products/ProductsContainer'
 
-function ProductsPage() {
+async function ProductsPage({
+  searchParams,  
+}: {
+    searchParams: { layout?: string; search?: string }
+}) {
+
   return (
     <div>
       <h1>Products Page</h1>
