@@ -16,7 +16,9 @@ function ProductsList({ products}: { products: Product[]}) {
         return (
           <article key={product.id} className='group relative'>
             <Link href={`/products/${productId}`}>
-            
+              <Card className='transform group-hover:shadow-xl transitionshadow duration-500'>
+
+              </Card>
             </Link>
           </article>
         )
