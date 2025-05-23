@@ -2,6 +2,7 @@ import { fetchAllProducts } from '@/utils/actions'
 import { Button } from '../ui/button'
 import Link from 'next/link'
 import { TbLayoutGrid } from 'react-icons/tb'
+import { BsList } from "react-icons/bs"
 import { Separator } from '../ui/separator'
 import ProductsGrid from './ProductsGrid'
 import ProductsList from './ProductsList'
@@ -37,6 +38,17 @@ async function ProductsContainer({
               href={`/products?layout=grid${searchTerm}`}
               >
                 <TbLayoutGrid />
+              </Link>
+            </Button>
+            <Button 
+              variant={layout === 'list' ? 'default' : 'ghost'}
+              size='icon'
+              asChild
+            >
+              <Link
+              href={`/products?layout=list${searchTerm}`}
+              >
+                <BsList />
               </Link>
             </Button>
           </div>
