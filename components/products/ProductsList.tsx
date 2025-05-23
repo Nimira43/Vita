@@ -31,10 +31,16 @@ function ProductsList({ products}: { products: Product[]}) {
                   <div>
                     <h2 className='text-4xl font-medium capitalize'>{name}</h2>
                     <h4 className='text-muted-foreground'>{company}</h4>
+                    <p className='text-muted-foreground text-lg md:ml-auto'>
+                      {poundsAmount}
+                    </p>
                   </div>
                 </CardContent>
               </Card>
             </Link>
+            <div className='absolute bottom-8 right-8 z-5'>
+              <FavouriteToggleButton productId={productId} />
+            </div>
           </article>
         )
       })}
