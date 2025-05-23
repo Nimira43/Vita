@@ -28,6 +28,9 @@ function ProductsList({ products}: { products: Product[]}) {
                       className='w-full rounded-md object-cover'
                     />
                   </div>
+                  <div>
+                    <h2 className='text-4xl font-medium capitalize'>{name}</h2>
+                  </div>
                 </CardContent>
               </Card>
             </Link>
