@@ -14,7 +14,11 @@ function ProductsList({ products}: { products: Product[]}) {
         const productId = product.id
 
         return (
-
+          <article key={product.id} className='group relative'>
+            <Link href={`/products/${productId}`}>
+            
+            </Link>
+          </article>
         )
       })}
     </div>
