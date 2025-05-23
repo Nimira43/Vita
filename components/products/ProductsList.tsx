@@ -30,6 +30,7 @@ function ProductsList({ products}: { products: Product[]}) {
                   </div>
                   <div>
                     <h2 className='text-4xl font-medium capitalize'>{name}</h2>
+                    <h4 className='text-muted-foreground'>{company}</h4>
                   </div>
                 </CardContent>
               </Card>
