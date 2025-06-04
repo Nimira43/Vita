@@ -9,12 +9,12 @@ async function ProductsPage({
   const search = searchParams.search || ''
 
   return (
-    <div>
+    <>
       <ProductsContainer
         layout={layout}
         search={search}
       />
-    </div>
+    </>
   )
 }
 export default ProductsPage

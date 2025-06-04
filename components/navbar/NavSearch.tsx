@@ -1,3 +1,4 @@
+'use client'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useDebouncedCallback} from 'use-debounce'
 import { Input } from '../ui/input'
@@ -30,6 +31,11 @@ function NavSearch() {
       type='search'
       placeholder='Search product...'
       className='max-w-xs dark:bg-muted'
+      onChange={(e) => {
+        setSearch(e.target.value)
+        handleSearch(e.target.value)
+      }}
+      value={search}
     />
   )
 }
