@@ -1,7 +1,7 @@
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useDebouncedCallback} from 'use-debounce'
 import { Input } from '../ui/input'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function NavSearch() {
   const searchParams = useSearchParams()
@@ -18,6 +18,10 @@ function NavSearch() {
     }
     replace(`/products?${params.toString()}`)
   }, 300)
+
+  useEffect(() => {
+
+  })
 
   return (
     <Input 
