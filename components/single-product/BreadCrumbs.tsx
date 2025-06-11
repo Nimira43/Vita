@@ -1,4 +1,4 @@
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList } from '../ui/breadcrumb'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from '../ui/breadcrumb'
 
 function BreadCrumbs({ name }: {name: string}) {
   return (
@@ -7,6 +7,14 @@ function BreadCrumbs({ name }: {name: string}) {
         <BreadcrumbItem>
           <BreadcrumbLink>
             Home
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+
+        <BreadcrumbSeparator />
+
+        <BreadcrumbItem>
+          <BreadcrumbLink>
+            Products
           </BreadcrumbLink>
         </BreadcrumbItem>
       </BreadcrumbList>
