@@ -5,7 +5,10 @@ function BreadCrumbs({ name }: {name: string}) {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink>
+          <BreadcrumbLink
+            href='/' 
+            className='text-lg'
+          >
             Home
           </BreadcrumbLink>
         </BreadcrumbItem>
@@ -13,10 +16,19 @@ function BreadCrumbs({ name }: {name: string}) {
         <BreadcrumbSeparator />
 
         <BreadcrumbItem>
-          <BreadcrumbLink>
+          <BreadcrumbLink
+            href='/products' 
+            className='text-lg'
+          >
             Products
           </BreadcrumbLink>
         </BreadcrumbItem>
+
+        <BreadcrumbSeparator />
+
+        <BreadcrumbItem>
+        </BreadcrumbItem>
+
       </BreadcrumbList>
     </Breadcrumb>
   )
