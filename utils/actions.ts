@@ -16,3 +16,7 @@ export const fetchAllProducts = () => {
     }
   })
 }
+
+export const fetchSingleProduct = async(productId: string) => {
+  
+}
