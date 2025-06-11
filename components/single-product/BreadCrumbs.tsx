@@ -1,4 +1,4 @@
-function BreadCrumbs() {
+function BreadCrumbs({ name }: {name: string}) {
   return (
     <div>
       BreadCrumbs      
