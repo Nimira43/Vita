@@ -2,7 +2,7 @@ import BreadCrumbs from '@/components/single-product/BreadCrumbs'
 import { fetchSingleProduct } from '@/utils/actions'
 import { formatCurrency } from '@/utils/format'
 import Image from 'next/image'
-import FavouriteToggleButton from '../FavouriteToggleButton'
+import FavouriteToggleButton from '@/components/products/FavouriteToggleButton'
 import ProductRating from '@/components/single-product/ProductRating'
 import AddToCart from '@/components/single-product/AddToCart'
 
