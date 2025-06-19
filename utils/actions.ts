@@ -36,6 +36,8 @@ export const fetchSingleProduct = async(productId: string) => {
       id: productId
     }
   })
-  if (!product) redirect('/products')
+  if (!product) {
+    redirect('/products')
+  }
   return product
 }
