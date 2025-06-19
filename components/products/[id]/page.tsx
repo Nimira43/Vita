@@ -49,4 +49,4 @@ async function SingleProductPage({
   )
 }
 
-export default page
+export default SingleProductPage
