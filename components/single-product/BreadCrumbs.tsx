@@ -7,7 +7,7 @@ function BreadCrumbs({ name }: {name: string}) {
         <BreadcrumbItem>
           <BreadcrumbLink
             href='/' 
-            className='text-lg'
+            className='text-lg uppercase'
           >
             Home
           </BreadcrumbLink>
@@ -16,7 +16,7 @@ function BreadCrumbs({ name }: {name: string}) {
         <BreadcrumbItem>
           <BreadcrumbLink
             href='/products' 
-            className='text-lg'
+            className='text-lg uppercase'
           >
             Products
           </BreadcrumbLink>
@@ -24,7 +24,7 @@ function BreadCrumbs({ name }: {name: string}) {
         <BreadcrumbSeparator />
         <BreadcrumbItem>
           <BreadcrumbPage
-            className='text-lg'
+            className='text-lg uppercase'
           >
             {name}
           </BreadcrumbPage>
