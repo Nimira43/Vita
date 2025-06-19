@@ -14,6 +14,9 @@ async function SingleProductPage({
   return (
     <section>
       <BreadCrumbs name={product.name}/>
+      <div className="className mt-5 grid gap-y-8 lg:grid-cols-2 lg:gap-x-16">
+        
+      </div>
     </section>
   )
 }
