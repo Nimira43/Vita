@@ -13,7 +13,9 @@ async function UserIcon() {
   }
 
   return (
-    <div>UserIcone</div>
+    <PiUserCircleLight
+      className='w-6 h-6 bg-primary rounded-full object-fit text-light'
+    />
   )
 }
 export default UserIcon
