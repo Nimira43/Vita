@@ -1,5 +1,5 @@
 import { PiUserCircleLight } from 'react-icons/pi'
-import { currentUser, auth } from '@clerk/nextjs/server'
+import { currentUser } from '@clerk/nextjs/server'
 
 async function UserIcon() {
   const user = await currentUser()
