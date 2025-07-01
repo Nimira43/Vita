@@ -4,6 +4,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { links } from '@/utils/links'
 import Link from 'next/link'
 import UserIcon from './UserIcon'
+import { SignedIn, SignedOut } from '@clerk/nextjs'
 
 function LinksDropDown() {
   return (
@@ -15,6 +16,8 @@ function LinksDropDown() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className='w-40' align='start' sideOffset={10}>
+        <SignedOut></SignedOut>
+        <SignedIn></SignedIn>
         {links.map((link) => {
           return (
             <DropdownMenuItem key={link.href}>
