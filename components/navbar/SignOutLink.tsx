@@ -1,7 +1,11 @@
-// function SignOutLink() {
-  
-//   return (
-//     <div>SignOutLink</div>
-//   )
-// }
-// export default SignOutLink
+'use client'
+
+function SignOutLink() {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default SignOutLink
