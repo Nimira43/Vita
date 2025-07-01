@@ -1,10 +1,10 @@
 import { RiMenu5Line } from 'react-icons/ri'
 import { Button } from '../ui/button'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../ui/dropdown-menu'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '../ui/dropdown-menu'
 import { links } from '@/utils/links'
 import Link from 'next/link'
 import UserIcon from './UserIcon'
-import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs'
+import { SignedIn, SignedOut, SignInButton, SignUpButton } from '@clerk/nextjs'
 
 function LinksDropDown() {
   return (
@@ -25,6 +25,16 @@ function LinksDropDown() {
                 Login
               </button>
             </SignInButton>
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem>
+            <SignUpButton mode='modal'>
+              <button
+                className='w-full text-left uppercase'
+              >
+                Register
+              </button>
+            </SignUpButton>
           </DropdownMenuItem>
         </SignedOut>
         <SignedIn>
