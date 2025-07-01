@@ -17,16 +17,18 @@ function LinksDropDown() {
       </DropdownMenuTrigger>
       <DropdownMenuContent className='w-40' align='start' sideOffset={10}>
         <SignedOut></SignedOut>
-        <SignedIn></SignedIn>
-        {links.map((link) => {
-          return (
-            <DropdownMenuItem key={link.href}>
-              <Link href={link.href} className='capitalize w-full'>
-                {link.label}
-              </Link>
-            </DropdownMenuItem>
-          )
-        })}
+        <SignedIn>
+          {links.map((link) => {
+            return (
+              <DropdownMenuItem key={link.href}>
+                <Link href={link.href} className='capitalize w-full'>
+                  {link.label}
+                </Link>
+              </DropdownMenuItem>
+            )
+          })}
+        </SignedIn>
+        
       </DropdownMenuContent>
     </DropdownMenu>
   )
