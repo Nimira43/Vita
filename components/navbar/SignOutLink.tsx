@@ -15,7 +15,8 @@ function SignOutLink() {
   return (
     <SignOutButton>
       <Link 
-        className='uppercase'
+        className='uppercase w-full text-left'
+        onClick={handleLogout}
         href='/'
       >
         Logout
