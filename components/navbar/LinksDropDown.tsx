@@ -3,6 +3,7 @@ import { Button } from '../ui/button'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../ui/dropdown-menu'
 import { links } from '@/utils/links'
 import Link from 'next/link'
+import UserIcon from './UserIcon'
 
 function LinksDropDown() {
   return (
@@ -10,6 +11,7 @@ function LinksDropDown() {
       <DropdownMenuTrigger asChild>
         <Button variant='outline' className='flex gap-4 max-w-[100px]'>
           <RiMenu5Line  className='w-6 h-6' />
+          <UserIcon />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className='w-40' align='start' sideOffset={10}>
