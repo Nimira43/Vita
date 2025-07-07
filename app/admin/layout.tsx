@@ -1,4 +1,7 @@
-function Layout() {
+import { Separator } from '@/components/ui/separator'
+import Sidebar from './Sidebar'
+
+function DashboardLayout() {
   return (
     <div>
       Layout
@@ -6,4 +9,4 @@ function Layout() {
   )
 }
 
-export default Layout
+export default DashboardLayout
