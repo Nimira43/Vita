@@ -1,4 +1,4 @@
-function layout() {
+function Layout() {
   return (
     <div>
       Layout
@@ -6,4 +6,4 @@ function layout() {
   )
 }
 
-export default layout
+export default Layout

@@ -1,9 +1,9 @@
-function page() {
+function ProductsPage() {
   return (
     <div>
-      Products
+      Admin Products Page
     </div>
   )
 }
 
-export default page
+export default ProductsPage

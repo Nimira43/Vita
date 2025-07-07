@@ -1,9 +1,9 @@
-function page() {
+function SalesPage() {
   return (
     <div>
-      Sales
+      Sales Page
     </div>
   )
 }
 
-export default page
+export default SalesPage
