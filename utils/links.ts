@@ -10,4 +10,5 @@ export const links: NavLink[] = [
   { href: '/favourites', label: 'favourites' },
   { href: '/cart', label: 'cart' },
   { href: '/orders', label: 'orders' },
+  { href: '/admin/sales', label: 'dashboard'},
 ]
