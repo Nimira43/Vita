@@ -6,6 +6,7 @@ import Link from 'next/link'
 import UserIcon from './UserIcon'
 import { SignedIn, SignedOut, SignInButton, SignUpButton } from '@clerk/nextjs'
 import SignOutLink from './SignOutLink'
+import { auth } from '@clerk/nextjs/server'
 
 function LinksDropDown() {
   return (

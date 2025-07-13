@@ -16,7 +16,6 @@ export default clerkMiddleware((auth, req) => {
   if (isAdminRoute(req) && !isAdminUser) {
     return NextResponse.redirect(new URL('/', req.url))
   }
-
   if (!isPublicRoute(req)) auth().protect()
 })
 
