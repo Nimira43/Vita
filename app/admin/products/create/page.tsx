@@ -10,6 +10,9 @@ const createProductAction = async (formData: FormData) => {
 }
 
 function CreateProductPage() {
+  const name = faker.commerce.productName()
+  const company = faker.company.name()
+  const description = faker.lorem.paragraph({ min: 10, max: 12})
   return (
     <section>
       <h1 className='text-2xl font-medium mb-8 uppercase'>Create Product</h1>
