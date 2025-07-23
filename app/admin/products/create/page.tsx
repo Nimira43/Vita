@@ -20,7 +20,12 @@ function CreateProductPage() {
         <form action={createProductAction}>
           <div className='mb-2'>
             <Label htmlFor='name'>Product Name</Label>
-            <Input id='name' name='name' type='text' />
+            <Input 
+              id='name' 
+              name='name' 
+              type='text' 
+              defaultValue={name}
+            />
           </div>
           <Button type='submit' size='lg'>Submit</Button>
         </form>
