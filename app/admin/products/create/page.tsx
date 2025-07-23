@@ -1,8 +1,8 @@
 function CreateProductPage() {
   return (
-    <div>
-      Create Product Page
-    </div>
+    <section>
+      <h1 className='text-2xl font-medium mb-8 uppercase'>Create Product</h1>
+    </section>
   )
 }
 
