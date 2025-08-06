@@ -1,6 +1,8 @@
 'use client'
 
 import { useFormStatus } from 'react-dom'
+import { Button } from '../ui/button'
+import { cn } from '@/lib/utils'
 
 type btnSize = 'default' | 'lg' | 'sm'
 
@@ -15,5 +17,16 @@ export function SubmitButton({
   text = 'submit',
   size = 'lg',
 }: SubmitButtonProps) {
-  const { pending } = useFormStatus
+  const { pending } = useFormStatus()
+
+  return (
+    <Button
+      type='submit'
+      disabled={pending}
+      className={cn('uppercase', className)}
+      size={size}
+    >
+
+    </Button>
+  )
 }
