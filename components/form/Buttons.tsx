@@ -1,5 +1,7 @@
 'use client'
 
+import { useFormStatus } from 'react-dom'
+
 type btnSize = 'default' | 'lg' | 'sm'
 
 type SubmitButtonProps = {
@@ -12,4 +14,6 @@ export function SubmitButton({
   className = '',
   text = 'submit',
   size = 'lg',
-}: SubmitButtonProps) {}
+}: SubmitButtonProps) {
+  const { pending } = useFormStatus
+}
