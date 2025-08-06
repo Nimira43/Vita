@@ -1,4 +1,5 @@
-import { Label } from "../ui/label"
+import { Input } from '../ui/input'
+import { Label } from '../ui/label'
 
 const name = 'price'
 type FormInputNumberProps = {
@@ -16,9 +17,16 @@ function PriceInput(
       >
         Price (£)
       </Label>
+      <Input 
+        id={name}
+        type='number'
+        name={name}
+        min={0}
+        defaultValue={defaultValue || 100}
+        required
+      />
     </div>
   )
-
 }
 
 export default PriceInput
