@@ -20,6 +20,12 @@ export default function CheckboxInput({
         name={name}
         defaultChecked={defaultChecked}
       />
+      <label 
+        htmlFor={name}
+        className='text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 uppercase'
+      >
+        {label}
+      </label>
     </div>
   )
 }
