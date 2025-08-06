@@ -1,4 +1,5 @@
 import { Label } from '../ui/label'
+import { Textarea } from '../ui/textarea'
 
 type TextAreaInputProps = {
   name: string
@@ -19,6 +20,14 @@ function TextAreaInput({
       >
         {labelText || name}
       </Label>
+      <Textarea
+        id={name}
+        name={name}
+        defaultValue={defaultValue}
+        rows={5}
+        required
+        className='leading-loose'
+      />
     </div>
   )
 
