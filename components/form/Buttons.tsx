@@ -3,6 +3,7 @@
 import { useFormStatus } from 'react-dom'
 import { Button } from '../ui/button'
 import { cn } from '@/lib/utils'
+import { AiOutlineReload } from 'react-icons/ai'
 
 type btnSize = 'default' | 'lg' | 'sm'
 
@@ -26,7 +27,16 @@ export function SubmitButton({
       className={cn('uppercase', className)}
       size={size}
     >
-
+      {pending ? (
+        <>
+          <AiOutlineReload 
+            className='mr-2 h-4 w-4 animate-spin'
+          />
+          Please wait...
+        </>
+      ) : (
+        text
+      )}
     </Button>
   )
 }
