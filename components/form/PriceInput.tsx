@@ -1,4 +1,8 @@
 const name = 'price'
-type FormINputNumberProps = {
+type FormInputNumberProps = {
   defaultValue?: number
 }
+
+function PriceInput(
+  { defaultValue }: FormInputNumberProps
+) {}
