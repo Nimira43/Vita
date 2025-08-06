@@ -1,3 +1,4 @@
+import { Input } from "../ui/input"
 import { Label } from "../ui/label"
 
 function ImageInput() {
@@ -11,6 +12,13 @@ function ImageInput() {
       >
         Image
       </Label>
+      <Input 
+        id={name}
+        name={name}
+        type='file'
+        required
+        accept='image/*'
+      />
     </div>
   )
 }
