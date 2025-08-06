@@ -3,3 +3,9 @@ type TextAreaInputProps = {
   labelText?: string
   defaultValue?: string
 }
+
+function TextAreaInput({
+  name,
+  labelText, 
+  defaultValue
+}: TextAreaInputProps) {}
