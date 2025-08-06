@@ -5,3 +5,7 @@ type FormInputProps = {
   defaultValue?: string
   placeholder?: string
 }
+
+function FormInput({
+  label, name, type, defaultValue, placeholder
+}: FormInputProps) {}
