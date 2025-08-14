@@ -1,11 +1,7 @@
 
 import { faker } from '@faker-js/faker'
 
-const createProductAction = async (formData: FormData) => {
-  'use server'
-  const name = formData.get('name') as string
-  console.log(name)
-}
+
 
 function CreateProduct() {
   const name = faker.commerce.productName()
