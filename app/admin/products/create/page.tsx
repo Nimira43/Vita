@@ -1,4 +1,5 @@
 import FormContainer from '@/components/form/FormContainer'
+import FormInput from '@/components/form/FormInput'
 import { createProductAction } from '@/utils/actions'
 import { faker } from '@faker-js/faker'
 
@@ -12,7 +13,20 @@ function CreateProduct() {
       <h1 className='text-2xl font-medium mb-8 uppercase'>Create Product</h1>
       <div className='border p-8 rounded-md'>
         <FormContainer action={createProductAction}>
-          
+          <div className='grid gap-4 md:grid-cols-2 my-4'>
+            <FormInput 
+              type='text'
+              name='name'
+              label='product name'
+              defaultValue={name}
+            />
+            <FormInput 
+              type='text'
+              name='company'
+              label='company'
+              defaultValue={company}
+            />
+          </div>
         </FormContainer>
       </div>
     </section>
