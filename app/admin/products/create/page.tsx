@@ -9,7 +9,7 @@ const createProductAction = async (formData: FormData) => {
   console.log(name)
 }
 
-function CreateProductPage() {
+function CreateProduct() {
   const name = faker.commerce.productName()
   const company = faker.company.name()
   const description = faker.lorem.paragraph({ min: 10, max: 12})
@@ -34,4 +34,4 @@ function CreateProductPage() {
   )
 }
 
-export default CreateProductPage
+export default CreateProduct
