@@ -1,7 +1,6 @@
-
+import FormContainer from '@/components/form/FormContainer'
+import { createProductAction } from '@/utils/actions'
 import { faker } from '@faker-js/faker'
-
-
 
 function CreateProduct() {
   const name = faker.commerce.productName()
@@ -12,7 +11,9 @@ function CreateProduct() {
     <section>
       <h1 className='text-2xl font-medium mb-8 uppercase'>Create Product</h1>
       <div className='border p-8 rounded-md'>
-      
+        <FormContainer action={createProductAction}>
+          
+        </FormContainer>
       </div>
     </section>
   )
