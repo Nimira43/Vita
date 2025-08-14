@@ -1,3 +1,4 @@
+import CheckboxInput from '@/components/form/CheckBoxInput'
 import FormContainer from '@/components/form/FormContainer'
 import FormInput from '@/components/form/FormInput'
 import ImageInput from '@/components/form/ImageInput'
@@ -37,6 +38,12 @@ function CreateProduct() {
             labelText='product description'
             defaultValue={description}
           />
+          <div className='mt-8'>
+            <CheckboxInput
+              name='featured'
+              label='featured'
+            />
+          </div>
         </FormContainer>
       </div>
     </section>
