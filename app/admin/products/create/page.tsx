@@ -1,5 +1,6 @@
 import FormContainer from '@/components/form/FormContainer'
 import FormInput from '@/components/form/FormInput'
+import PriceInput from '@/components/form/PriceInput'
 import { createProductAction } from '@/utils/actions'
 import { faker } from '@faker-js/faker'
 
@@ -26,6 +27,7 @@ function CreateProduct() {
               label='company'
               defaultValue={company}
             />
+            <PriceInput />
           </div>
         </FormContainer>
       </div>
