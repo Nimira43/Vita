@@ -1,3 +1,4 @@
+import { SubmitButton } from '@/components/form/Buttons'
 import CheckboxInput from '@/components/form/CheckBoxInput'
 import FormContainer from '@/components/form/FormContainer'
 import FormInput from '@/components/form/FormInput'
@@ -44,6 +45,10 @@ function CreateProduct() {
               label='featured'
             />
           </div>
+          <SubmitButton 
+            text='Create Product'
+            className='mt-8 uppercase'
+          />
         </FormContainer>
       </div>
     </section>
