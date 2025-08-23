@@ -44,10 +44,15 @@ export const fetchSingleProduct = async(productId: string) => {
   return product
 }
 
+const renderError = () => {}
+const getAuthUser = async () => {}
+
+
 export const createProductAction = async (
   prevState: any,
   formData: FormData
 ): Promise<{ message: string }> => {
+  const user = await getAuthUser()
   try {
     const name = formData.get('name') as string
     const company = formData.get('company') as string
