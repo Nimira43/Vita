@@ -49,6 +49,9 @@ export const createProductAction = async (
   formData: FormData
 ): Promise<{ message: string }> => {
   try {
+    const name = formData.get('name') as string
+    const company = formData.get('company') as string
+
     return { message: 'Product created' }
   } catch (error) {
     return { message: 'There was an error...'}
