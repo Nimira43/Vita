@@ -56,6 +56,15 @@ export const createProductAction = async (
     const description = formData.get('description') as string
     const featured = Boolean(formData.get('featured') as string)
 
+    await db.product.create({
+      data: {
+        name,
+        company,
+        price,
+        image: '/'
+      }
+    })
+
 
     return { message: 'Product created' }
   } catch (error) {
