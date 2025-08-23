@@ -61,13 +61,15 @@ export const createProductAction = async (
         name,
         company,
         price,
-        image: '/'
+        image: '/images/dining-table.jpg',
+        description,
+        featured,
+        clerkId: user.id
       }
     })
 
-
     return { message: 'Product created' }
   } catch (error) {
-    return { message: 'There was an error...'}
+    return renderError(error)
   }
 }
