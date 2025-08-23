@@ -1,6 +1,7 @@
 'use server'
 
 import db from '@/utils/db'
+import { currentUser } from '@clerk/nextjs/server'
 import { redirect } from 'next/navigation'
 
 export const fetchFeaturedProducts = async () => {
@@ -51,7 +52,13 @@ const renderError = (error: unknown): { message: string } => {
   }
 }
 
-const getAuthUser = async () => {}
+const getAuthUser = async () => {
+  const user = await currentUser()
+  if (!user) {
+    throw new Error('You must be logged in to access this route.')
+  }
+  return user
+}
 
 
 export const createProductAction = async (
