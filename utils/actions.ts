@@ -44,7 +44,13 @@ export const fetchSingleProduct = async(productId: string) => {
   return product
 }
 
-const renderError = () => {}
+const renderError = (error: unknown): { message: string } => {
+  console.log(error)
+  return {
+    message: error instanceof Error ? error.message : 'An error occurred',
+  }
+}
+
 const getAuthUser = async () => {}
 
 
