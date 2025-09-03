@@ -11,7 +11,6 @@ const getAuthUser = async () => {
   }
   return user
 }
-
 const renderError = (error: unknown): { message: string } => {
   console.log(error)
   return {
