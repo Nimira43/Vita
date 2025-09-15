@@ -68,8 +68,11 @@ export const createProductAction = async (
   try {
     const rawData = Object.fromEntries(formData)
     const validatedFields = productSchema.parse(rawData)
-    return { message: 'Product created' }
+
     
+
+    return { message: 'Product created' }
+
   } catch (error) {
     return renderError(error)
   }
