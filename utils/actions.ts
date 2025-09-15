@@ -67,9 +67,20 @@ export const createProductAction = async (
   const user = await getAuthUser()
   try {
     const rawData = Object.fromEntries(formData)
-    const validatedFields = productSchema.parse(rawData)
+    const validatedFields = productSchema.safeParse(rawData)
 
-    
+    if (!validatedFields.success) {
+      const errors = validatedFields.error.errors.map((error) => error.message)      
+      throw new Error(errors.join(','))
+    }
+
+    await db.product.create({
+      data: {
+        ...validatedFields.data,
+        image: '/images/product-1.jpg',
+        clerkId: user.id,
+      },
+    })
 
     return { message: 'Product created' }
 
