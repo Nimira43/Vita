@@ -3,6 +3,7 @@
 import db from '@/utils/db'
 import { auth, currentUser } from '@clerk/nextjs/server'
 import { redirect } from 'next/navigation'
+import { productSchema } from './schemas'
 
 const getAuthUser = async () => {
   const user = await currentUser()
@@ -66,8 +67,9 @@ export const createProductAction = async (
   const user = await getAuthUser()
   try {
     const rawData = Object.fromEntries(formData)
-    
+    const validatedFields = productSchema.parse(rawData)
     return { message: 'Product created' }
+    
   } catch (error) {
     return renderError(error)
   }
