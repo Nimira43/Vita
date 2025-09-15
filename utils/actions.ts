@@ -72,7 +72,7 @@ export const createProductAction = async (
     await db.product.create({
       data: {
         ...validatedFields,
-        image: '/images/product-1.jpg',
+        image: '/images/dining-table.jpg',
         clerkId: user.id,
       },
     })
