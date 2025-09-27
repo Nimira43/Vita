@@ -7,4 +7,7 @@ export const supabase = createClient(
   process.env.SUPERBASE_KEY as string
 )
 
-export const uploadImage = async (image: File) => {}
+export const uploadImage = async (image: File) => {
+  const timestamp = Date.now()
+  const newName = `${timestamp}=${image.name}`
+}
