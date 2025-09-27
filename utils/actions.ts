@@ -4,6 +4,7 @@ import db from '@/utils/db'
 import { auth, currentUser } from '@clerk/nextjs/server'
 import { redirect } from 'next/navigation'
 import { imageSchema, productSchema, validateWithZodSchema } from './schemas'
+import { uploadImage } from './supabase'
 
 const getAuthUser = async () => {
   const user = await currentUser()
@@ -72,7 +73,8 @@ export const createProductAction = async (
     const validatedFields = validateWithZodSchema(productSchema, rawData)
   
     const validatedFile = validateWithZodSchema(imageSchema, { image: file })
-    console.log(validatedFile)
+    
+    const fullPath = await uploadImage(validatedFile.image)
 
     await db.product.create({
       data: {
