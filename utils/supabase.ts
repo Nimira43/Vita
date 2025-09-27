@@ -6,3 +6,5 @@ export const supabase = createClient(
   process.env.SUPERBASE_URL as string,
   process.env.SUPERBASE_KEY as string
 )
+
+export const uploadImage = async (image: File) => {}
