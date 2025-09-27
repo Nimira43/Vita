@@ -16,4 +16,6 @@ export const uploadImage = async (image: File) => {
     .upload(newName, image, {
       cacheControl: '3600',
     })
+  if (!data) throw new Error('Image upload failed')
+  
 }
