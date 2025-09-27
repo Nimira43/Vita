@@ -83,10 +83,8 @@ export const createProductAction = async (
         clerkId: user.id,
       },
     })
-
-    return { message: 'Product created' }
-
   } catch (error) {
     return renderError(error)
   }
+  redirect('/admin/products')
 }
