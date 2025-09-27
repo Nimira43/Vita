@@ -1,4 +1,4 @@
-import { createClient} from '@supabase/supabase-js'
+import { createClient } from '@supabase/supabase-js'
 
 const bucket = 'main-bucket'
 
@@ -9,7 +9,7 @@ export const supabase = createClient(
 
 export const uploadImage = async (image: File) => {
   const timestamp = Date.now()
-  const newName = `${timestamp}=${image.name}`
+  const newName = `${timestamp}-${image.name}`
 
   const { data, error } = await supabase.storage
     .from(bucket)
@@ -17,5 +17,5 @@ export const uploadImage = async (image: File) => {
       cacheControl: '3600',
     })
   if (!data) throw new Error('Image upload failed')
-  
+  return supabase.storage.from(bucket).getPublicUrl(newName).data.publicUrl
 }
