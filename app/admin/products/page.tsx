@@ -1,6 +1,8 @@
 import EmptyList from '@/components/global/EmptyList'
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { fetchAdminProducts } from '@/utils/actions'
+import { formatCurrency } from '@/utils/format'
+import Link from 'next/link'
 
 async function ItemsPage() {
   const items = await fetchAdminProducts()
@@ -26,17 +28,21 @@ async function ItemsPage() {
             const { id: productId, name, company, price} = item
 
             return (
-              <TableRow>
+              <TableRow key={productId}>
                 <TableCell>
-                  Item
+                  <Link
+                    href={`/products/${productId}`}
+                    className='text-muted-foreground tracking-wide capitalize'
+                  >
+                    {name}
+                  </Link>
                 </TableCell>
-                <TableCell>Company</TableCell>
-                <TableCell>Price</TableCell>
-                <TableCell></TableCell>
+                <TableCell>{company}</TableCell>
+                <TableCell>{formatCurrency(price)}</TableCell>
+                <TableCell className='flex items-center gap-x-2'></TableCell>
               </TableRow>
             )
           })}
-          
         </TableBody>
       </Table>
     </section>
