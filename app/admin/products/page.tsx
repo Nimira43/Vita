@@ -1,8 +1,12 @@
+import EmptyList from '@/components/global/EmptyList'
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { fetchAdminProducts } from '@/utils/actions'
 
 async function ItemsPage() {
   const items = await fetchAdminProducts()
+
+  if (items.length === 0) return <EmptyList />
+
   return (
     <section>
       <Table>
