@@ -1,6 +1,17 @@
+import { Table, TableCaption, TableHeader, TableRow } from '@/components/ui/table'
+
 function ItemsPage() {
   return (
-    <div>Item Page</div>
+    <section>
+      <Table>
+        <TableCaption>
+          Total Products: 34
+        </TableCaption>
+        <TableHeader>
+          <TableRow></TableRow>
+        </TableHeader>
+      </Table>
+    </section>
   )
 }
 
