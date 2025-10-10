@@ -13,6 +13,11 @@ const getAuthUser = async () => {
   }
   return user
 }
+
+const getAdminUser = async () => {
+  const user = await getAuthUser()
+}
+
 const renderError = (error: unknown): { message: string } => {
   console.log(error)
   return {
