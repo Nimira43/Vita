@@ -95,3 +95,13 @@ export const createProductAction = async (
   }
   redirect('/admin/products')
 }
+
+export const fetchAdminProducts = async () => {
+  await getAdminUser()
+  const products = await db.product.findMany({
+    orderBy: {
+      createdAt: 'desc',
+    },
+  })
+  return products
+}
