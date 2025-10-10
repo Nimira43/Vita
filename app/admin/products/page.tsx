@@ -11,7 +11,7 @@ async function ItemsPage() {
     <section>
       <Table>
         <TableCaption>
-          Total Products: 34
+          Total Products: {items.length}
         </TableCaption>
         <TableHeader>
           <TableRow>
@@ -22,6 +22,7 @@ async function ItemsPage() {
           </TableRow>
         </TableHeader>
         <TableBody>
+          
           <TableRow>
             <TableCell>
               Item000
