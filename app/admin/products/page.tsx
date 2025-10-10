@@ -1,4 +1,4 @@
-import { Table, TableCaption, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 
 function ItemsPage() {
   return (
@@ -15,6 +15,16 @@ function ItemsPage() {
             <TableHead>Actions</TableHead>
           </TableRow>
         </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableCell>
+              Item000
+            </TableCell>
+            <TableCell>Company</TableCell>
+            <TableCell>Price</TableCell>
+            <TableCell></TableCell>
+          </TableRow>
+        </TableBody>
       </Table>
     </section>
   )
