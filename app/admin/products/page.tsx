@@ -1,4 +1,4 @@
-import { Table, TableCaption, TableHeader, TableRow } from '@/components/ui/table'
+import { Table, TableCaption, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 
 function ItemsPage() {
   return (
@@ -8,7 +8,12 @@ function ItemsPage() {
           Total Products: 34
         </TableCaption>
         <TableHeader>
-          <TableRow></TableRow>
+          <TableRow>
+            <TableHead>Product Name</TableHead>
+            <TableHead>Company</TableHead>
+            <TableHead>Price</TableHead>
+            <TableHead>Actions</TableHead>
+          </TableRow>
         </TableHeader>
       </Table>
     </section>
