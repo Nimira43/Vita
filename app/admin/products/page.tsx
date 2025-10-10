@@ -22,15 +22,21 @@ async function ItemsPage() {
           </TableRow>
         </TableHeader>
         <TableBody>
+          {items.map((item) => {
+            const { id: productId, name, company, price} = item
+
+            return (
+              <TableRow>
+                <TableCell>
+                  Item
+                </TableCell>
+                <TableCell>Company</TableCell>
+                <TableCell>Price</TableCell>
+                <TableCell></TableCell>
+              </TableRow>
+            )
+          })}
           
-          <TableRow>
-            <TableCell>
-              Item000
-            </TableCell>
-            <TableCell>Company</TableCell>
-            <TableCell>Price</TableCell>
-            <TableCell></TableCell>
-          </TableRow>
         </TableBody>
       </Table>
     </section>
