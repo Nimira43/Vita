@@ -16,6 +16,8 @@ const getAuthUser = async () => {
 
 const getAdminUser = async () => {
   const user = await getAuthUser()
+  if (user.id !== process.env.ADMIN_USER_ID) redirect('/')
+  return user
 }
 
 const renderError = (error: unknown): { message: string } => {
