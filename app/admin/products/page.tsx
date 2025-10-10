@@ -1,6 +1,8 @@
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+import { fetchAdminProducts } from '@/utils/actions'
 
-function ItemsPage() {
+async function ItemsPage() {
+  const items = await fetchAdminProducts()
   return (
     <section>
       <Table>
