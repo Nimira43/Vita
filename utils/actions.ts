@@ -5,6 +5,7 @@ import { auth, currentUser } from '@clerk/nextjs/server'
 import { redirect } from 'next/navigation'
 import { imageSchema, productSchema, validateWithZodSchema } from './schemas'
 import { uploadImage } from './supabase'
+import { revalidatePath } from 'next/cache'
 
 const getAuthUser = async () => {
   const user = await currentUser()
