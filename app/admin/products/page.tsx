@@ -40,9 +40,8 @@ async function ItemsPage() {
                 <TableCell>{company}</TableCell>
                 <TableCell>{formatCurrency(price)}</TableCell>
                 <TableCell className='flex items-center gap-x-2'>
-                  <Link href={`/admin/products/${productId}/edit`}>
-                  
-                  </Link>
+                  {/* <Link href={`/admin/products/${productId}/edit`}>
+                  </Link> */}
 
                 </TableCell>
               </TableRow>

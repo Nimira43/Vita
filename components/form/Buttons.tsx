@@ -40,3 +40,6 @@ export function SubmitButton({
     </Button>
   )
 }
+
+type actionType = 'edit' | 'delete'
+
