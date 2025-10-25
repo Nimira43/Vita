@@ -122,7 +122,8 @@ export const deleteProductAction = async(
     })
 
     revalidatePath('/admin/products')
+    return { message: 'Product removed.'}
   } catch (error) {
-    
+    return renderError(error)
   }
 }
