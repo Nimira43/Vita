@@ -57,4 +57,12 @@ async function ItemsPage() {
   )
 }
 
+function DeleteProduct({
+  productId
+}: {
+  productId: string
+}) {
+  
+}
+
 export default ItemsPage
