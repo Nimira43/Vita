@@ -64,8 +64,16 @@ export const IconButton = ({
   }
 
   return (
-    <Button>
-      Icon
+    <Button
+      type='submit'
+      size= 'icon'
+      variant='link'
+      className='p-2 cursor-pointer'
+    >
+      {pending 
+        ? <AiOutlineReload className='animate-spin' />
+        : renderIcon()
+      }
     </Button>
   )
 }
