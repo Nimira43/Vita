@@ -3,7 +3,8 @@
 import { useFormStatus } from 'react-dom'
 import { Button } from '../ui/button'
 import { cn } from '@/lib/utils'
-import { AiOutlineReload } from 'react-icons/ai'
+import { AiOutlineReload, AiOutlineEdit } from 'react-icons/ai'
+import { PiTrash } from 'react-icons/pi'
 
 type btnSize = 'default' | 'lg' | 'sm'
 
@@ -50,7 +51,17 @@ export const IconButton = ({
 }) => {
   const { pending } = useFormStatus()
 
-  const renderIcon = () => {}
+  const renderIcon = () => {
+    switch (actionType) {
+      case 'edit':
+        return <AiOutlineEdit />
+      case 'delete':
+        return <PiTrash />
+      default:
+        const never: never = actionType
+        throw new Error(`Invalid action type: ${never}`)
+    }
+  }
 
   return (
     <Button>
