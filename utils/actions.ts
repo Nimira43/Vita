@@ -115,7 +115,13 @@ export const deleteProductAction = async(
   await getAdminUser()
 
   try {
-    
+    await db.product.delete({
+      where: {
+        id: productId,
+      },
+    })
+
+    revalidatePath('/admin/products')
   } catch (error) {
     
   }
