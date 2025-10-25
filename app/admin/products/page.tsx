@@ -1,4 +1,5 @@
 import { IconButton } from '@/components/form/Buttons'
+import FormContainer from '@/components/form/FormContainer'
 import EmptyList from '@/components/global/EmptyList'
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { deleteProductAction, fetchAdminProducts } from '@/utils/actions'
@@ -64,10 +65,14 @@ function DeleteProduct({
 }) {
   const deleteProduct = deleteProductAction.bind(
     null,
-    { productId}
+    { productId }
   )
 
-  
+  return (
+    <FormContainer action={deleteProduct}>
+      <IconButton actionType='delete' />
+    </FormContainer>
+  )
 }
 
 export default ItemsPage
