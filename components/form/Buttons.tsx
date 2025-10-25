@@ -47,4 +47,15 @@ export const IconButton = ({
   actionType
 }: {
   actionType: actionType
-}) => {}
+}) => {
+  const { pending } = useFormStatus()
+
+  const renderIcon = () => {}
+
+  return (
+    <Button>
+      Icon
+    </Button>
+  )
+}
+
