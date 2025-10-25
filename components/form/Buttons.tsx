@@ -43,3 +43,8 @@ export function SubmitButton({
 
 type actionType = 'edit' | 'delete'
 
+export const IconButton = ({
+  actionType
+}: {
+  actionType: actionType
+}) => {}
