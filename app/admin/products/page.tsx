@@ -1,7 +1,7 @@
 import { IconButton } from '@/components/form/Buttons'
 import EmptyList from '@/components/global/EmptyList'
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
-import { fetchAdminProducts } from '@/utils/actions'
+import { deleteProductAction, fetchAdminProducts } from '@/utils/actions'
 import { formatCurrency } from '@/utils/format'
 import Link from 'next/link'
 
@@ -62,6 +62,11 @@ function DeleteProduct({
 }: {
   productId: string
 }) {
+  const deleteProduct = deleteProductAction.bind(
+    null,
+    { productId}
+  )
+
   
 }
 
