@@ -105,3 +105,5 @@ export const fetchAdminProducts = async () => {
   })
   return products
 }
+
+export const deleteProductAction = () => {}
