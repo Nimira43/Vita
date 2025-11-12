@@ -20,4 +20,7 @@ export const uploadImage = async (image: File) => {
   return supabase.storage.from(bucket).getPublicUrl(newName).data.publicUrl
 }
 
-export const deleteImage = () => {}
+export const deleteImage = (url: string) => {
+  const imageName = url.split('/').pop()
+  
+ }
