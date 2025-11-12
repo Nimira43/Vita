@@ -1,3 +1,4 @@
+import db from '@/utils/db';
 import { createClient } from '@supabase/supabase-js'
 
 const bucket = 'main-bucket'
@@ -31,6 +32,16 @@ export const deleteImage = (url: string) => {
 export const deleteProductAction = async (prevState: { productId: string }) => {
   const { productId } = prevState
   await getAdminUser()
+
+  try {
+    const product = await db.producct.delete({
+      where: {
+        id: productId,
+      }
+    })
+  } catch (error) {
+    
+  }
 
   
 }
