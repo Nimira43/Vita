@@ -26,4 +26,6 @@ export const deleteImage = (url: string) => {
   if (!imageName) throw new Error('Invalid URL')
 
   return supabase.storage.from(bucket).remove([imageName])
- }
+}
+
+export const deleteProductAction = () => {}
