@@ -23,6 +23,7 @@ export const uploadImage = async (image: File) => {
 export const deleteImage = (url: string) => {
   const imageName = url.split('/').pop()
 
-  if (!imageName) throw new Error(`Invalid URL)
-    
+  if (!imageName) throw new Error('Invalid URL')
+
+  return supabase.storage.from(bucket).remove([imageName])
  }
