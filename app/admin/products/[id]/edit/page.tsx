@@ -4,6 +4,7 @@ import FormContainer from '@/components/form/FormContainer'
 import FormInput from '@/components/form/FormInput'
 import PriceInput from '@/components/form/PriceInput'
 import TextAreaInput from '@/components/form/TextAreaInput'
+import { fetchAdminProductDetails } from '@/utils/actions'
 
 async function EditProductPage({
   params
@@ -11,6 +12,8 @@ async function EditProductPage({
   params: { id: string }
 }) {
   const { id } = params
+  const product = await fetchAdminProductDetails(id)
+  const { name, company, description, featured, price } = product
 
   return (
     <section>
