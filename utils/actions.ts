@@ -69,7 +69,7 @@ export const fetchSingleProduct = async(productId: string) => {
   return product
 }
 
-
+export const fetchAdminProductDetails = async () => {}
 
 export const createProductAction = async (
   prevState: any,
