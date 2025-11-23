@@ -1,4 +1,5 @@
 import FormContainer from '@/components/form/FormContainer'
+import FormInput from '@/components/form/FormInput'
 
 function EditProductPage() {
   return (
@@ -7,7 +8,21 @@ function EditProductPage() {
       <div className='border p-8 rounded-md'>
         <FormContainer action=''>
           <div className='grid gap-4 md:grid-cols-2 my-4'>
-            
+            <input
+              type='hidden'
+              name='id'
+              value={id}
+            />
+            <FormInput 
+              type='text'
+              name='name'
+              label='product name'
+            />                      
+            <FormInput 
+              type='text'
+              name='company'
+              label='company'
+            />                      
           </div>
         </FormContainer>
       </div>
