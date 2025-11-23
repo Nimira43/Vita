@@ -118,7 +118,14 @@ export const updateProductAction = async (
 
     const validatedFields = validateWithZodSchema(productSchema, rawData)
 
-    
+    await db.product.update({
+      where: {
+        id: productId,
+      },
+      data: {
+        ...validatedFields,
+      },
+    })
   } catch (error) {
     
   }
