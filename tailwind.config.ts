@@ -8,11 +8,10 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-		'main': '#22c55e',
-		'dark': '#111',
-		'light': '#fffdfa',
   	extend: {
   		colors: {
+				'dark': '#111',
+				'light': '#fffdfa',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
