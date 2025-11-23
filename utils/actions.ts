@@ -148,7 +148,14 @@ export const updateProductAction = async (
   }
 }
 
-export const updateProductImageAction = async () => {}
+export const updateProductImageAction = async (
+  prevState: any,
+  formData: FormData
+) => {
+  return {
+    message: 'Product Image updated successfully.'
+  }
+}
 
 export const deleteProductAction = async(
   prevState: {
