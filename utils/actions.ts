@@ -69,17 +69,6 @@ export const fetchSingleProduct = async(productId: string) => {
   return product
 }
 
-export const fetchAdminProductDetails = async (productId: string) => {
-  await getAdminUser()
-  const product = await db.product.findUnique({
-    where: {
-      id: productId
-    },
-  })
-  if (!product) redirect('/admin/products')
-  return product
-}
-
 export const createProductAction = async (
   prevState: any,
   formData: FormData
@@ -118,6 +107,38 @@ export const fetchAdminProducts = async () => {
   return products
 }
 
+export const deleteProductAction = async(
+  prevState: {
+    productId: string
+  }) => {
+  const { productId } = prevState
+  await getAdminUser()
+
+  try {
+    const product = await db.product.delete({
+      where: {
+        id: productId,
+      },
+    })
+    await deleteImage(product.image)
+    revalidatePath('/admin/products')
+    return { message: 'Product removed.'}
+  } catch (error) {
+    return renderError(error)
+  }
+}
+
+export const fetchAdminProductDetails = async (productId: string) => {
+  await getAdminUser()
+  const product = await db.product.findUnique({
+    where: {
+      id: productId
+    },
+  })
+  if (!product) redirect('/admin/products')
+  return product
+}
+
 export const updateProductAction = async (
   prevState: any,
   formData: FormData
@@ -153,27 +174,6 @@ export const updateProductImageAction = async (
   formData: FormData
 ) => {
   return {
-    message: 'Product Image updated successfully.'
-  }
-}
-
-export const deleteProductAction = async(
-  prevState: {
-    productId: string
-  }) => {
-  const { productId } = prevState
-  await getAdminUser()
-
-  try {
-    const product = await db.product.delete({
-      where: {
-        id: productId,
-      },
-    })
-    await deleteImage(product.image)
-    revalidatePath('/admin/products')
-    return { message: 'Product removed.'}
-  } catch (error) {
-    return renderError(error)
+    message: 'Product image updated successfully.'
   }
 }
