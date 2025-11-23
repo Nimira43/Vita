@@ -36,7 +36,7 @@ async function SingleProductPage({
           </div>
           <ProductRating productId={params.id}/>
           <h4 className='text-xl mt-2'>{company}</h4>
-          <p className='mt-3 text-md bg-muted inline-block p-2 rounded-md'>
+          <p className='mt-3 text-md text-primary font-medium bg-muted inline-block p-2 rounded-md'>
             {poundsAmount}
           </p>
           <p className='mt-6 leading-8 text-muted-foreground'>

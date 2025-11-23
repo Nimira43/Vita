@@ -75,4 +75,7 @@
   font-family: 'Slackey', cursive;
 }
 
+.centre {
+  @apply flex justify-center items-center;
+}
 

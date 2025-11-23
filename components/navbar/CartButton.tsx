@@ -9,11 +9,11 @@ async function CartButton() {
       asChild
       variant='outline'
       size='icon'
-      className='flex justify-center items-center relative'
+      className='centre relative'
     >
       <Link href='/cart'>
         <PiShoppingCartLight />
-        <span className='absolute -top-3 -right-3 bg-primary text-light rounded-full h-6 w-6 flex items-center justify-center text-xs'>
+        <span className='absolute -top-3 -right-3 bg-primary text-light rounded-full h-6 w-6 centre text-xs'>
           {numItemsInCart}
         </span>
       </Link>
