@@ -107,7 +107,17 @@ export const fetchAdminProducts = async () => {
   return products
 }
 
-export const updateProductAction = () => {}
+export const updateProductAction = async (
+  prevState: any,
+  formData: FormData
+) => {
+  await getAdminUser()
+  try {
+    
+  } catch (error) {
+    
+  }
+}
 
 export const deleteProductAction = async(
   prevState: {
