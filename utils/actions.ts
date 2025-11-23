@@ -69,6 +69,8 @@ export const fetchSingleProduct = async(productId: string) => {
   return product
 }
 
+
+
 export const createProductAction = async (
   prevState: any,
   formData: FormData

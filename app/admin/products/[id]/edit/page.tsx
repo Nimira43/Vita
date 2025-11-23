@@ -10,8 +10,7 @@ async function EditProductPage({
 }: {
   params: { id: string }
 }) {
-  
-
+  const { id } = params
 
   return (
     <section>
