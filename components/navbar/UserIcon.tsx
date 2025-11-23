@@ -14,7 +14,7 @@ async function UserIcon() {
 
   return (
     <PiUserCircleLight
-      className='w-6 h-6 bg-primary rounded-full object-fit text-light'
+      className='w-6 h-6 rounded-full object-fit text-light'
     />
   )
 }

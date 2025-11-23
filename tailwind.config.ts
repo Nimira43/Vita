@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
 		'main': '#22c55e',
 		'dark': '#111',
-		'light': '#fffeff',
+		'light': '#fffdfa',
   	extend: {
   		colors: {
   			background: 'hsl(var(--background))',
