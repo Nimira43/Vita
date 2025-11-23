@@ -133,7 +133,7 @@ export const updateProductAction = async (
       message: 'Product updated successfully.'
     }
   } catch (error) {
-    
+    return renderError(error)
   }
 }
 
