@@ -1,3 +1,4 @@
+import { SubmitButton } from '@/components/form/Buttons'
 import CheckboxInput from '@/components/form/CheckBoxInput'
 import FormContainer from '@/components/form/FormContainer'
 import FormInput from '@/components/form/FormInput'
@@ -38,6 +39,10 @@ function EditProductPage() {
               label='featured'
             />
           </div>
+          <SubmitButton
+            text='update product'
+            className='mt-8'
+          />
         </FormContainer>
       </div>
     </section>
