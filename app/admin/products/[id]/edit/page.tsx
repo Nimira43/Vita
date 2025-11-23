@@ -1,5 +1,8 @@
+import CheckboxInput from '@/components/form/CheckBoxInput'
 import FormContainer from '@/components/form/FormContainer'
 import FormInput from '@/components/form/FormInput'
+import PriceInput from '@/components/form/PriceInput'
+import TextAreaInput from '@/components/form/TextAreaInput'
 
 function EditProductPage() {
   return (
@@ -22,7 +25,18 @@ function EditProductPage() {
               type='text'
               name='company'
               label='company'
-            />                      
+            />     
+            <PriceInput />                 
+          </div>
+          <TextAreaInput
+            name='description'
+            labelText='product description'
+          />
+          <div className='mt-6'>
+            <CheckboxInput
+              name='featured'
+              label='featured'
+            />
           </div>
         </FormContainer>
       </div>
