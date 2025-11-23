@@ -1,8 +1,11 @@
 function EditProductPage() {
   return (
-    <div>
-      Edit Product Page
-    </div>
+    <section>
+      <h1 className='text-2xl font-medium mb-8 uppercase'>Update Product</h1>
+      <div className='border p-8 rounded-md'>
+        
+      </div>
+    </section>
   )
 }
 
