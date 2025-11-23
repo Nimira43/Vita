@@ -29,17 +29,3 @@ export const deleteImage = (url: string) => {
   return supabase.storage.from(bucket).remove([imageName])
 }
 
-// export const deleteProductAction = async (prevState: { productId: string }) => {
-//   const { productId } = prevState
-//   await getAdminUser()
-
-//   try {
-//     const product = await db.product.delete({
-//       where: {
-//         id: productId,
-//       }
-//     })
-//   } catch (error) {
-    
-//   }
-// }
