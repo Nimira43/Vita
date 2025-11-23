@@ -69,7 +69,14 @@ export const fetchSingleProduct = async(productId: string) => {
   return product
 }
 
-export const fetchAdminProductDetails = async () => {}
+export const fetchAdminProductDetails = async (productId: string) => {
+  await getAdminUser()
+  const product = await db.product.findUnique({
+    where: {
+      id: productId
+    },
+  })
+}
 
 export const createProductAction = async (
   prevState: any,
