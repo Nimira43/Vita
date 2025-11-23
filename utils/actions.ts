@@ -76,6 +76,8 @@ export const fetchAdminProductDetails = async (productId: string) => {
       id: productId
     },
   })
+  if (!product) redirect('/admin/products')
+  return product
 }
 
 export const createProductAction = async (
