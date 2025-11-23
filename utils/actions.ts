@@ -148,6 +148,8 @@ export const updateProductAction = async (
   }
 }
 
+export const updateProductImageAction = async () => {}
+
 export const deleteProductAction = async(
   prevState: {
     productId: string
