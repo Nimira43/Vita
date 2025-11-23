@@ -107,6 +107,8 @@ export const fetchAdminProducts = async () => {
   return products
 }
 
+export const updateProductAction = () => {}
+
 export const deleteProductAction = async(
   prevState: {
     productId: string
