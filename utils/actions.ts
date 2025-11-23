@@ -113,6 +113,11 @@ export const updateProductAction = async (
 ) => {
   await getAdminUser()
   try {
+    const productId = formData.get('id') as string
+    const rawData = Object.fromEntries(formData)
+
+    const validatedFields = validateWithZodSchema(productSchema, rawData)
+
     
   } catch (error) {
     
