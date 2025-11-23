@@ -5,7 +5,14 @@ import FormInput from '@/components/form/FormInput'
 import PriceInput from '@/components/form/PriceInput'
 import TextAreaInput from '@/components/form/TextAreaInput'
 
-function EditProductPage() {
+async function EditProductPage({
+  params
+}: {
+  params: { id: string }
+}) {
+  
+
+
   return (
     <section>
       <h1 className='text-2xl font-medium mb-8 uppercase'>Update Product</h1>
