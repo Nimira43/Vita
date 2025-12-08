@@ -1,6 +1,6 @@
 'use client'
 
-import { actionFunction } from '@/utils/types'
+import { type actionFunction } from '@/utils/types'
 import Image from 'next/image';
 import { useState } from 'react';
 import { Button } from '../ui/button';
