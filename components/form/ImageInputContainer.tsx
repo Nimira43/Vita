@@ -17,8 +17,14 @@ function ImageInputContainer(props: ImageInputContainerProps) {
   const [isUpdateFormVisible, setUpdateFormVisible] = useState
    
   return ( 
-    <div>
-  
+    <div className='mb-8'>
+      <Image
+        src={image}
+        width={200}
+        height={200}
+        className='rounded-md object-cover mb-4 w-[200px] h-[200px]'
+        alt={name}      
+      />
 
     </div>
    )
