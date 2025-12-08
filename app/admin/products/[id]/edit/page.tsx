@@ -2,6 +2,7 @@ import { SubmitButton } from '@/components/form/Buttons'
 import CheckboxInput from '@/components/form/CheckBoxInput'
 import FormContainer from '@/components/form/FormContainer'
 import FormInput from '@/components/form/FormInput'
+import ImageInputContainer from '@/components/form/ImageInputContainer'
 import PriceInput from '@/components/form/PriceInput'
 import TextAreaInput from '@/components/form/TextAreaInput'
 import { fetchAdminProductDetails, updateProductAction } from '@/utils/actions'
@@ -19,7 +20,7 @@ async function EditProductPage({
     <section>
       <h1 className='text-2xl font-medium mb-8 uppercase'>Update Product</h1>
       <div className='border p-8 rounded-md'>
-        <FormContainer action={updateProductAction}>
+        <ImageInputContainer action={updateProductAction}>
           <div className='grid gap-4 md:grid-cols-2 my-4'>
             <input
               type='hidden'
@@ -58,7 +59,7 @@ async function EditProductPage({
             text='update product'
             className='mt-8 uppercase'
           />
-        </FormContainer>
+        </ImageInputContainer>
       </div>
     </section>
   )

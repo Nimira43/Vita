@@ -9,10 +9,10 @@ import ImageInput from './ImageInput';
 import { SubmitButton } from './Buttons';
 
 type ImageInputContainerProps = {
-  image: string;
-  name: string;
+  image: string
+  name: string
   action: actionFunction
-  text: string;
+  text: string
   children?: React.ReactNode
 }
 
