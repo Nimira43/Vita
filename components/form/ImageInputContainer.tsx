@@ -1,4 +1,5 @@
 import { actionFunction } from '@/utils/types'
+import Image from 'next/image';
 
 
 type ImageInputContainerProps = {
@@ -11,9 +12,11 @@ type ImageInputContainerProps = {
 
 
 function ImageInputContainer(props: ImageInputContainerProps) {
+  const {image, name, action, text } = props
+   
   return ( 
     <div>
-      ImageInputContainer
+  
 
     </div>
    )
