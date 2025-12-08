@@ -1,5 +1,6 @@
 import { actionFunction } from '@/utils/types'
 import Image from 'next/image';
+import { useState } from 'react';
 
 
 type ImageInputContainerProps = {
@@ -12,7 +13,8 @@ type ImageInputContainerProps = {
 
 
 function ImageInputContainer(props: ImageInputContainerProps) {
-  const {image, name, action, text } = props
+  const { image, name, action, text } = props
+  const [isUpdateFormVisible, setUpdateFormVisible] = useState
    
   return ( 
     <div>
