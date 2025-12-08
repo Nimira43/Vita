@@ -175,7 +175,8 @@ export const updateProductImageAction = async (
 ) => {
   await getAuthUser()
   try {
-    
+    const image = formData.get('image') as File
+    const productId = formData.get('id') as string
   } catch (error) {
     
   }
