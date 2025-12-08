@@ -189,9 +189,12 @@ export const updateProductImageAction = async (
         image: fullPath,
       }
     })
-  
+    revalidatePath(`/admin/products/${productId}/edit`)
+    return { 
+      message: 'Project image has been updated succesfully.'
+    }
   } catch (error) {
-
+    return renderError(error)
     
   }
   return {
