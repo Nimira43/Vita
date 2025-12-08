@@ -173,6 +173,11 @@ export const updateProductImageAction = async (
   prevState: any,
   formData: FormData
 ) => {
+  try {
+    
+  } catch (error) {
+    
+  }
   return {
     message: 'Product image updated successfully.'
   }
