@@ -20,7 +20,12 @@ async function EditProductPage({
     <section>
       <h1 className='text-2xl font-medium mb-8 uppercase'>Update Product</h1>
       <div className='border p-8 rounded-md'>
-        <ImageInputContainer action={updateProductAction}>
+        <ImageInputContainer
+          action={updateProductImageAction}>
+          name={name}
+          image={product.image}
+          text='update image'
+        >
           <div className='grid gap-4 md:grid-cols-2 my-4'>
             <input
               type='hidden'
