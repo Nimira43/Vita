@@ -7,11 +7,10 @@ type ImageInputContainerProps = {
   action: actionFunction
   text: string;
   children?: React.ReactNode
-  
 }
 
 
-function ImageInputContainer() {
+function ImageInputContainer(props: ImageInputContainerProps) {
   return ( 
     <div>
       ImageInputContainer
