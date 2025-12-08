@@ -173,6 +173,7 @@ export const updateProductImageAction = async (
   prevState: any,
   formData: FormData
 ) => {
+  await getAuthUser()
   try {
     
   } catch (error) {
