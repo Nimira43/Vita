@@ -178,7 +178,9 @@ export const updateProductImageAction = async (
     const image = formData.get('image') as File
     const productId = formData.get('id') as string
     const oldImageUrl = formData.get('url') as string
-    const validatedFile = validateWithZodSchema(imageSchema, { image})
+    const validatedFile = validateWithZodSchema(imageSchema, { image })
+    const fullPath = await uploadImage(validatedFile.image)
+    await deleteImage(oldImageUrl)
   
   } catch (error) {
 
