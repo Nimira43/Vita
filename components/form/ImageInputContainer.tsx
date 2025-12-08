@@ -2,6 +2,9 @@ import { actionFunction } from '@/utils/types'
 import Image from 'next/image';
 import { useState } from 'react';
 import { Button } from '../ui/button';
+import FormContainer from './FormContainer';
+import ImageInput from './ImageInput';
+import { SubmitButton } from './Buttons';
 
 
 type ImageInputContainerProps = {
@@ -34,7 +37,13 @@ function ImageInputContainer(props: ImageInputContainerProps) {
       >
         {text}
       </Button>
-
+      <div className='max-w-md mt-4'>
+        <FormContainer action={action}>
+          {props.children}
+          <ImageInput />
+          <SubmitButton size='sm' />
+        </FormContainer>
+      </div>
     </div>
    )
 }
