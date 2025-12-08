@@ -1,6 +1,7 @@
 import { actionFunction } from '@/utils/types'
 import Image from 'next/image';
 import { useState } from 'react';
+import { Button } from '../ui/button';
 
 
 type ImageInputContainerProps = {
@@ -25,6 +26,14 @@ function ImageInputContainer(props: ImageInputContainerProps) {
         className='rounded-md object-cover mb-4 w-[200px] h-[200px]'
         alt={name}      
       />
+      <Button
+        variant='outline'
+        size='sm'
+        onClick={() => setUpdateFormVisible((prev) => !prev)}
+      
+      >
+        {text}
+      </Button>
 
     </div>
    )
