@@ -181,6 +181,14 @@ export const updateProductImageAction = async (
     const validatedFile = validateWithZodSchema(imageSchema, { image })
     const fullPath = await uploadImage(validatedFile.image)
     await deleteImage(oldImageUrl)
+    await db.product.update({
+      where: {
+        id: productId,
+      },
+      data: {
+        image: fullPath,
+      }
+    })
   
   } catch (error) {
 
