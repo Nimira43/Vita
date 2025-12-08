@@ -1,3 +1,5 @@
+'use client'
+
 import { actionFunction } from '@/utils/types'
 import Image from 'next/image';
 import { useState } from 'react';
@@ -6,7 +8,6 @@ import FormContainer from './FormContainer';
 import ImageInput from './ImageInput';
 import { SubmitButton } from './Buttons';
 
-
 type ImageInputContainerProps = {
   image: string;
   name: string;
@@ -14,7 +15,6 @@ type ImageInputContainerProps = {
   text: string;
   children?: React.ReactNode
 }
-
 
 function ImageInputContainer(props: ImageInputContainerProps) {
   const { image, name, action, text } = props
