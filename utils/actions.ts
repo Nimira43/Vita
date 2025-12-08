@@ -177,7 +177,11 @@ export const updateProductImageAction = async (
   try {
     const image = formData.get('image') as File
     const productId = formData.get('id') as string
+    const oldImageUrl = formData.get('url') as string
+    const validatedFile = validateWithZodSchema(imageSchema, { image})
+  
   } catch (error) {
+
     
   }
   return {
