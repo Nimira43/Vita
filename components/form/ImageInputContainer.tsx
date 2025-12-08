@@ -18,7 +18,7 @@ type ImageInputContainerProps = {
 
 function ImageInputContainer(props: ImageInputContainerProps) {
   const { image, name, action, text } = props
-  const [isUpdateFormVisible, setUpdateFormVisible] = useState
+  const [isUpdateFormVisible, setUpdateFormVisible] = useState(false)
    
   return ( 
     <div className='mb-8'>
@@ -37,15 +37,17 @@ function ImageInputContainer(props: ImageInputContainerProps) {
       >
         {text}
       </Button>
-      <div className='max-w-md mt-4'>
-        <FormContainer action={action}>
-          {props.children}
-          <ImageInput />
-          <SubmitButton size='sm' />
-        </FormContainer>
-      </div>
-    </div>
-   )
+      {isUpdateFormVisible && (
+        <div className='max-w-md mt-4'>
+          <FormContainer action={action}>
+            {props.children}
+            <ImageInput />
+            <SubmitButton size='sm' />
+          </FormContainer>
+        </div>
+      )}
+    </div>  
+  )
 }
  
 export default ImageInputContainer
