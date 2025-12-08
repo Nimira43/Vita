@@ -7,6 +7,7 @@ type ImageInputContainerProps = {
   action: actionFunction
   text: string;
   children?: React.ReactNode
+  
 }
 
 
