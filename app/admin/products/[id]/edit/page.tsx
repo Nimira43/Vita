@@ -36,9 +36,7 @@ async function EditProductPage({
             name='url'
             value={product.image}
           />
-        </ImageInputContainer>
-          
-          
+        </ImageInputContainer>          
         <FormContainer action={updateProductAction}>
           <div className='grid gap-4 md:grid-cols-2 my-4'>   
             <input
