@@ -194,10 +194,6 @@ export const updateProductImageAction = async (
       message: 'Project image has been updated succesfully.'
     }
   } catch (error) {
-    return renderError(error)
-    
-  }
-  return {
-    message: 'Product image updated successfully.'
+    return renderError(error)  
   }
 }

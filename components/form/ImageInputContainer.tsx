@@ -27,13 +27,13 @@ function ImageInputContainer(props: ImageInputContainerProps) {
         width={200}
         height={200}
         className='rounded-md object-cover mb-4 w-[200px] h-[200px]'
-        alt={name}      
+        alt={name}     
+        priority
       />
       <Button
         variant='outline'
         size='sm'
         onClick={() => setUpdateFormVisible((prev) => !prev)}
-      
       >
         {text}
       </Button>
