@@ -1,5 +1,3 @@
-import { RiHeartLine } from 'react-icons/ri'
-import { Button } from '@/components/ui/button'
 import { auth } from '@clerk/nextjs/server'
 import { CardSignInButton } from '../form/Buttons'
 import { fetchFavouriteId } from '@/utils/actions'
@@ -21,16 +19,6 @@ async function FavouriteToggleButton({
       favouriteId={favouriteId}
       productId={productId}
     />
-  )
-  
-  return (
-    <Button
-      size='icon'
-      variant='outline'
-      className='p-2 cursor-pointer'
-    >
-      <RiHeartLine />
-    </Button>
   )
 }
 
