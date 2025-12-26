@@ -8,6 +8,7 @@ import { PiTrash } from 'react-icons/pi'
 import { RiHeartLine, RiHeartFill } from 'react-icons/ri'
 import { SignInButton } from '@clerk/nextjs'
 
+
 type btnSize = 'default' | 'lg' | 'sm'
 
 type SubmitButtonProps = {
@@ -110,7 +111,12 @@ export const CardSubmitButton = ({
       variant='outline'
       className='p-2 cursor-pointer'
     >
-
+      {pending
+        ? (<ReloadIcon className='animate-spin' />)
+        : isFavourite
+          ? (<RiHeartFill />)
+          : (<RiHeartLine />)
+      }
     </Button>
   )
 }
