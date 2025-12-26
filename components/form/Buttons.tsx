@@ -102,4 +102,15 @@ export const CardSubmitButton = ({
   isFavourite: boolean
   }) => {
   const { pending } = useFormStatus()
+
+  return (
+    <Button
+      type='submit'
+      size='icon'
+      variant='outline'
+      className='p-2 cursor-pointer'
+    >
+
+    </Button>
+  )
 }
