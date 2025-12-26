@@ -257,3 +257,4 @@ export const toggleFavouriteAction = async (
   }
 }
 
+export const fetchUserFavourites = () => {}
