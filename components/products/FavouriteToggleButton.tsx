@@ -1,5 +1,6 @@
 import { RiHeartLine } from 'react-icons/ri'
 import { Button } from '@/components/ui/button'
+import { auth } from '@clerk/nextjs/server'
 
 function FavouriteToggleButton({ productId }:{productId: string}) {
   return (
