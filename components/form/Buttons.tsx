@@ -95,3 +95,5 @@ export const CardSignInButton = () => {
     </SignInButton>
   )
 }
+
+export const CardSubmitButton = () => {}
