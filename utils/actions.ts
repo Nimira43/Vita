@@ -259,4 +259,11 @@ export const toggleFavouriteAction = async (
 
 export const fetchUserFavourites = async () => {
   const user = await getAuthUser()
+  const favourites = await db.favourite
+    .findMany({
+      where: {
+        clerkId: user.id,
+      },
+      
+    })
 }
