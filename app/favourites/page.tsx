@@ -7,15 +7,18 @@ async function FavouritePage() {
 
   if (favourites.length === 0) {
     return (
-      <SectionTitle 
-        text='You have no favourites yet.'
-      />
+      <SectionTitle text='You have no favourites yet.' />
     )
   }
 
   return (
     <div>
-      <h1>Favourite Page</h1>
+      <SectionTitle text='Favourites' />
+      <ProductsGrid
+        products={
+          favourites.map((favourite) => favourite.product)
+        }
+      />
     </div>
   )
 }
