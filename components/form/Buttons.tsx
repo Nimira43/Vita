@@ -100,4 +100,6 @@ export const CardSubmitButton = ({
   isFavourite
 }: {
   isFavourite: boolean
-}) => {}
+  }) => {
+  const { pending } = useFormStatus()
+}
