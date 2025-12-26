@@ -13,6 +13,8 @@ async function FavouriteToggleButton({
   const { userId } = auth()  
 
   if (!userId) return <CardSignInButton />
+
+  const favouriteId = await fetchFavouriteId({ productId})
   
   return (
     <Button
