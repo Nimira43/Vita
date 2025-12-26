@@ -199,11 +199,22 @@ export const updateProductImageAction = async (
 }
 
 export const fetchFavouriteId = async ({
-  productid
+  productId
 }: {
   productId: string
 }) => { 
   const user = await getAuthUser()
+  const favourite = await db.favourite
+    .findFirst({
+      where: {
+        productId,
+        clerkId: user.id
+      },
+      select: {
+        id: true,
+      },
+    })
+    return favourite?.id || null
 }
 
 export const toggleFavouriteAction = async () => {
