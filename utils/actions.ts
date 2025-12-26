@@ -198,7 +198,13 @@ export const updateProductImageAction = async (
   }
 }
 
-export const fetchFavouriteId = () => {}
+export const fetchFavouriteId = async ({
+  productid
+}: {
+  productId: string
+}) => { 
+  
+}
 
 export const toggleFavouriteAction = async () => {
   return { 
