@@ -1,4 +1,3 @@
-import { toggleFavouriteAction } from './actions';
 'use server'
 
 import db from '@/utils/db'
@@ -247,12 +246,14 @@ export const toggleFavouriteAction = async (
         },
       })
     }
+    revalidatePath(pathname)
+    return {
+      message: favouriteId
+        ? 'Removed from Favourites'
+        : 'Added to Favourites'
+    }
   } catch (error) {
     return renderError(error)
-  }
-
-  return { 
-    message: 'Toggle Favourite Action Placeholder'
   }
 }
 
