@@ -264,6 +264,9 @@ export const fetchUserFavourites = async () => {
       where: {
         clerkId: user.id,
       },
-      
+      include: {
+        product: true,
+      },
     })
+    return favourites
 }
