@@ -11,6 +11,8 @@ async function FavouriteToggleButton({
   productId: string
 }) {
   const { userId } = auth()  
+
+  if (!userId) return <CardSignInButton />
   
   return (
     <Button
