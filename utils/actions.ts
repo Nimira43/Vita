@@ -203,7 +203,7 @@ export const fetchFavouriteId = async ({
 }: {
   productId: string
 }) => { 
-  
+  const user = await getAuthUser()
 }
 
 export const toggleFavouriteAction = async () => {
