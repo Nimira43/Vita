@@ -239,6 +239,13 @@ export const toggleFavouriteAction = async (
           id: favouriteId,
         },
       })
+    } else {
+      await db.favourite.create({
+        data: {
+          productId,
+          clerkId: user.id
+        },
+      })
     }
   } catch (error) {
     return renderError(error)
