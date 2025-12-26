@@ -1,3 +1,4 @@
+import { toggleFavouriteAction } from './actions';
 'use server'
 
 import db from '@/utils/db'
@@ -217,8 +218,15 @@ export const fetchFavouriteId = async ({
     return favourite?.id || null
 }
 
-export const toggleFavouriteAction = async () => {
+export const toggleFavouriteAction = async (
+  prevState: {
+    productId: string
+    favouriteId: string | null
+    pathname: string
+  }
+) => {
   return { 
     message: 'Toggle Favourite Action Placeholder'
   }
 }
+
