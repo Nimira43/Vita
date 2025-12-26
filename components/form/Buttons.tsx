@@ -96,4 +96,8 @@ export const CardSignInButton = () => {
   )
 }
 
-export const CardSubmitButton = () => {}
+export const CardSubmitButton = ({
+  isFavourite
+}: {
+  isFavourite: boolean
+}) => {}
