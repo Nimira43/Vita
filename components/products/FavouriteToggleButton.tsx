@@ -5,7 +5,13 @@ import { CardSignInButton } from '../form/Buttons'
 import { fetchFavouriteId } from '@/utils/actions'
 import FavouriteToggleForm from './FavouriteToggleForm'
 
-function FavouriteToggleButton({ productId }:{productId: string}) {
+async function FavouriteToggleButton({
+  productId
+}: {
+  productId: string
+}) {
+  const { userId } = auth()  
+  
   return (
     <Button
       size='icon'
