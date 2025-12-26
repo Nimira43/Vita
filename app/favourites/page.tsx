@@ -1,3 +1,5 @@
+import { fetchUserFavourites } from '@/utils/actions'
+
 function FavouritePage() {
   return (
     <div>
