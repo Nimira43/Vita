@@ -197,3 +197,7 @@ export const updateProductImageAction = async (
     return renderError(error)  
   }
 }
+
+export const toggleFavouriteAction = async () => {
+  
+}
