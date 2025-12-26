@@ -257,4 +257,6 @@ export const toggleFavouriteAction = async (
   }
 }
 
-export const fetchUserFavourites = () => {}
+export const fetchUserFavourites = async () => {
+  const user = await getAuthUser()
+}
