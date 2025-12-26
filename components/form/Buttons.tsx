@@ -7,7 +7,7 @@ import { AiOutlineReload, AiOutlineEdit } from 'react-icons/ai'
 import { PiTrash } from 'react-icons/pi'
 import { RiHeartLine, RiHeartFill } from 'react-icons/ri'
 import { SignInButton } from '@clerk/nextjs'
-
+import { ReloadIcon } from '@radix-ui/react-icons'
 
 type btnSize = 'default' | 'lg' | 'sm'
 
