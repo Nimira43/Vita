@@ -225,6 +225,7 @@ export const toggleFavouriteAction = async (
     pathname: string
   }
 ) => {
+  const user = await getAuthUser()
   return { 
     message: 'Toggle Favourite Action Placeholder'
   }
