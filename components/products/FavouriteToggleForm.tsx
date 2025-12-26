@@ -5,10 +5,13 @@ import { CardSubmitButton } from '../form/Buttons'
 
 type FavouriteToggleFormProps = {
   productId: string
-  favourite: string | null
+  favouriteId: string | null
 }
 
-function FavouriteToggleForm() {
+function FavouriteToggleForm({
+  productId,
+  favouriteId,
+}: FavouriteToggleFormProps) {
   return (
     <div>
       FavouriteToggleForm      
