@@ -1,4 +1,5 @@
 import { fetchUserFavourites } from '@/utils/actions'
+import SectionTitle from '@/components/global/SectionTitle'
 
 function FavouritePage() {
   return (
