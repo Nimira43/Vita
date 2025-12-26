@@ -226,6 +226,11 @@ export const toggleFavouriteAction = async (
   }
 ) => {
   const user = await getAuthUser()
+  const { 
+    productId,
+    favouriteId,
+    pathname
+  } = prevState
   return { 
     message: 'Toggle Favourite Action Placeholder'
   }
