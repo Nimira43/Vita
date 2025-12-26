@@ -5,7 +5,7 @@ import { Button } from '../ui/button'
 import { cn } from '@/lib/utils'
 import { AiOutlineReload, AiOutlineEdit } from 'react-icons/ai'
 import { PiTrash } from 'react-icons/pi'
-import { RiHeartLine } from 'react-icons/ri'
+import { RiHeartLine, RiHeartFill } from 'react-icons/ri'
 
 type btnSize = 'default' | 'lg' | 'sm'
 
