@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 import { AiOutlineReload, AiOutlineEdit } from 'react-icons/ai'
 import { PiTrash } from 'react-icons/pi'
 import { RiHeartLine, RiHeartFill } from 'react-icons/ri'
+import { SignInButton } from '@clerk/nextjs'
 
 type btnSize = 'default' | 'lg' | 'sm'
 
@@ -79,4 +80,10 @@ export const IconButton = ({
   )
 }
 
-export const CardSignInButton = () => {}
+export const CardSignInButton = () => {
+  return (
+    <SignInButton mode='modal'>
+
+    </SignInButton>
+  )
+}
