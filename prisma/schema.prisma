@@ -20,3 +20,7 @@ model Product {
   updatedAt     DateTime   @updatedAt
   clerkId       String
 }
+
+model Favourite {
+  id            String    @id @default(uuid())
+}
