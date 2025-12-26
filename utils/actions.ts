@@ -233,7 +233,13 @@ export const toggleFavouriteAction = async (
   } = prevState
 
   try {
-    
+    if (favouriteId) {
+      await db.favourite.delete({
+        where: {
+          id: favouriteId,
+        },
+      })
+    }
   } catch (error) {
     return renderError(error)
   }
