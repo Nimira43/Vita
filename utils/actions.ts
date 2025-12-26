@@ -198,6 +198,8 @@ export const updateProductImageAction = async (
   }
 }
 
+export const fetchFavouriteId = () => {}
+
 export const toggleFavouriteAction = async () => {
   return { 
     message: 'Toggle Favourite Action Placeholder'
