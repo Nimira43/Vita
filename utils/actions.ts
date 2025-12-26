@@ -231,6 +231,13 @@ export const toggleFavouriteAction = async (
     favouriteId,
     pathname
   } = prevState
+
+  try {
+    
+  } catch (error) {
+    return renderError(error)
+  }
+
   return { 
     message: 'Toggle Favourite Action Placeholder'
   }
