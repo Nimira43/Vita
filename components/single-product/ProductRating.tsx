@@ -1,6 +1,7 @@
 import { IoStar } from 'react-icons/io5'
 
-async function ProductRating({productId}: {productId: string}) {
+// async function ProductRating({productId}: {productId: string}) {
+function ProductRating({productId}: {productId: string}) {
   const rating = 4.2
   const count = 25
 

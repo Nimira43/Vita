@@ -5,6 +5,7 @@ import Image from 'next/image'
 import FavouriteToggleButton from '@/components/products/FavouriteToggleButton'
 import ProductRating from '@/components/single-product/ProductRating'
 import AddToCart from '@/components/single-product/AddToCart'
+import ShareButton from '@/components/single-product/ShareButton'
 
 async function SingleProductPage({ 
   params 
@@ -32,7 +33,10 @@ async function SingleProductPage({
         <div>
           <div className='flex gap-x-8 items-center'>
             <h1 className='uppercase text-3xl font-medium'>{name}</h1>
-            <FavouriteToggleButton productId={params.id} />
+            <div className='flex items-center gap-x-2'>
+              <FavouriteToggleButton productId={params.id} />
+              <ShareButton />
+            </div>
           </div>
           <ProductRating productId={params.id}/>
           <h4 className='text-xl mt-2'>{company}</h4>
