@@ -15,17 +15,17 @@ function ShareButton() {
       >
         <IoShareSocial />
       </Button>
-      </PopoverTrigger>
-      <PopoverContent
-        side='top'
-        align='end'
-        sideOffset={10}
-        className='flex items-center gap-x-2 justify-center w-full'
-      >
-        <GrFacebookOption />
-        <BsTwitterX />
-        <BsInstagram />
-      </PopoverContent>
+    </PopoverTrigger>
+    <PopoverContent
+      side='top'
+      align='end'
+      sideOffset={10}
+      className='flex items-center gap-x-2 justify-center w-full'
+    >
+      <GrFacebookOption />
+      <BsTwitterX />
+      <BsInstagram />
+    </PopoverContent>
   </Popover>)
 }
 

@@ -1,3 +1,5 @@
+"use client"
+
 import { RiMenu5Line } from 'react-icons/ri'
 import { Button } from '../ui/button'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '../ui/dropdown-menu'
@@ -6,41 +8,34 @@ import Link from 'next/link'
 import UserIcon from './UserIcon'
 import { SignedIn, SignedOut, SignInButton, SignUpButton } from '@clerk/nextjs'
 import SignOutLink from './SignOutLink'
-import { auth } from '@clerk/nextjs/server'
 
-function LinksDropDown() {
-  const { userId } = auth()
-  const isAdmin = userId === process.env.ADMIN_USER_ID
+function LinksDropDown({ isAdmin }) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant='outline' className='flex gap-4 max-w-[100px]'>
-          <RiMenu5Line  className='w-6 h-6' />
+          <RiMenu5Line className='w-6 h-6' />
           <UserIcon />
         </Button>
       </DropdownMenuTrigger>
+
       <DropdownMenuContent className='w-40' align='start' sideOffset={10}>
         <SignedOut>
           <DropdownMenuItem>
             <SignInButton mode='modal'>
-              <button
-                className='w-full text-left uppercase'
-              >
-                Login
-              </button>
+              <button className='w-full text-left uppercase'>Login</button>
             </SignInButton>
           </DropdownMenuItem>
+
           <DropdownMenuSeparator />
+
           <DropdownMenuItem>
             <SignUpButton mode='modal'>
-              <button
-                className='w-full text-left uppercase'
-              >
-                Register
-              </button>
+              <button className='w-full text-left uppercase'>Register</button>
             </SignUpButton>
           </DropdownMenuItem>
         </SignedOut>
+
         <SignedIn>
           {links.map((link) => {
             if (link.label === 'dashboard' && !isAdmin) return null
@@ -52,7 +47,9 @@ function LinksDropDown() {
               </DropdownMenuItem>
             )
           })}
+
           <DropdownMenuSeparator />
+
           <DropdownMenuItem>
             <SignOutLink />
           </DropdownMenuItem>
@@ -61,4 +58,5 @@ function LinksDropDown() {
     </DropdownMenu>
   )
 }
+
 export default LinksDropDown

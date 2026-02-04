@@ -1,0 +1,32 @@
+"use client"
+
+import { PiUserCircleLight } from 'react-icons/pi'
+import { useUser } from '@clerk/nextjs'
+
+function UserIcon() {
+  const { user, isLoaded } = useUser()
+
+  if (!isLoaded) {
+    return (
+      <PiUserCircleLight className="w-6 h-6 rounded-full object-fit text-light" />
+    )
+  }
+
+  const profileImage = user?.imageUrl
+
+  if (profileImage) {
+    return (
+      <img
+        src={profileImage}
+        className="w-6 h-6 rounded-full object-cover"
+        alt="User profile"
+      />
+    )
+  }
+
+  return (
+    <PiUserCircleLight className="w-6 h-6 rounded-full object-fit text-light" />
+  )
+}
+
+export default UserIcon
